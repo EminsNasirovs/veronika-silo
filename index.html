@@ -1,0 +1,2061 @@
+<!doctype html>
+<html lang="lv" class="js">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="robots" content="noindex, nofollow" />
+<title>Veronika Šilo — psiholoģe · konsultācijas un semināri</title>
+<meta name="description" content="Individuālas psihologa konsultācijas par konkrētām tēmām un semināri skolām, uzņēmumiem un vecākiem. Latviešu, krievu un angļu valodā. Pieteikšanās tiešsaistē." />
+<meta name="theme-color" content="#F7F4ED" />
+<meta property="og:title" content="Veronika Šilo — psiholoģe" />
+<meta property="og:description" content="Strādājam ar konkrētu tēmu, nevis ar visu uzreiz." />
+<meta property="og:type" content="profile" />
+<meta property="og:locale" content="lv_LV" />
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<!-- Lora + Inter Tight. Abiem ir pilns kirilicas apakškopums (pārbaudīts ar
+     fonts.googleapis.com css2 pieprasījumu) — RU versija nenokrīt uz sistēmas
+     fontu, un latviešu diakritika (ā č ē ģ ī ķ ļ ņ š ū ž) ir vietā. -->
+<link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Inter+Tight:wght@300;400;500;600&display=swap" rel="stylesheet" />
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Psychologist",
+  "name": "Veronika Šilo",
+  "jobTitle": "Psiholoģe",
+  "email": "veronika.silo@gmail.com",
+  "knowsLanguage": ["lv", "ru", "en"],
+  "availableLanguage": ["lv", "ru", "en"],
+  "makesOffer": [
+    { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Individuāla psihologa konsultācija" } },
+    { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Semināri skolām, uzņēmumiem un vecākiem" } }
+  ]
+}
+</script>
+
+<!-- Ja CDN nenostrādā 3 s laikā, saturs jebkurā gadījumā ir redzams. -->
+<script>
+  setTimeout(function () {
+    if (!window.__animReady) document.documentElement.classList.add('no-anim');
+  }, 3000);
+</script>
+
+<style>
+/* ═══════════════════════════════════════════════════════════════
+   Veronika Šilo — psiholoģe · LV / RU / EN
+   Dizaina marķieri: "kabinets ar logu uz dārzu". Silts auzu papīrs,
+   dziļa meža tinte, sūnu zaļš kā vienīgais struktūras akcents,
+   māla oranžs tikai darbībām. Serifs domām, groteska darbam.
+   Apzināti siltāks un praktiskāks nekā klīniskās lapas —
+   viņas auditorijā ir gan vecāks, gan skolas direktors.
+   ═══════════════════════════════════════════════════════════════ */
+:root{
+  --ink:#17211D;
+  --ink-2:#2B3A33;
+  --mute:#66756D;
+  --faint:#95A29A;
+  --paper:#F7F4ED;
+  --paper-2:#F1ECE2;
+  --paper-3:#E9E2D5;
+  --line:#DFD8C9;
+  --line-2:#CEC5B2;
+  --moss:#3E6B56;
+  --moss-deep:#2A4A3B;
+  --moss-soft:#DFEAE3;
+  --clay:#B4623C;
+  --clay-deep:#964E2D;
+  --clay-soft:#F3E1D6;
+  --r:4px;
+  --ease:cubic-bezier(.22,.85,.28,1);
+  --ease-soft:cubic-bezier(.4,0,.2,1);
+  --bar:34px;
+  --nav:72px;
+}
+
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion: reduce){ html{scroll-behavior:auto} }
+
+body{
+  margin:0;
+  background:var(--paper);
+  color:var(--ink);
+  font-family:'Inter Tight',system-ui,-apple-system,'Segoe UI',sans-serif;
+  font-size:17px;
+  line-height:1.62;
+  font-weight:350;
+  -webkit-font-smoothing:antialiased;
+  text-rendering:optimizeLegibility;
+  padding-top:var(--bar);
+  overflow-x:hidden;
+}
+
+h1,h2,h3,h4{font-family:'Lora',Georgia,serif;font-weight:500;line-height:1.16;margin:0;letter-spacing:-.012em}
+p{margin:0}
+a{color:inherit}
+img{max-width:100%;display:block}
+button{font:inherit;color:inherit}
+
+.wrap{width:min(1160px,calc(100% - 2.6rem));margin-inline:auto}
+.narrow{width:min(760px,calc(100% - 2.6rem));margin-inline:auto}
+
+/* ── augšējā melnraksta josla ─────────────────────────────── */
+.demobar{
+  position:fixed;inset:0 0 auto 0;height:var(--bar);z-index:120;
+  display:flex;align-items:center;justify-content:center;gap:.6rem;
+  background:var(--ink);color:#EFEAE0;
+  font-size:.72rem;letter-spacing:.13em;text-transform:uppercase;font-weight:400;
+}
+.demobar .dot{width:6px;height:6px;border-radius:50%;background:var(--clay);flex:none}
+.demobar b{font-weight:600;letter-spacing:.09em}
+@media (max-width:560px){ .demobar{font-size:.62rem;letter-spacing:.09em} }
+
+.progress{
+  position:fixed;top:var(--bar);left:0;right:0;height:2px;z-index:119;
+  background:var(--moss);transform:scaleX(0);transform-origin:0 50%;
+}
+
+/* ── navigācija ───────────────────────────────────────────── */
+.nav{
+  position:fixed;top:var(--bar);left:0;right:0;z-index:110;height:var(--nav);
+  display:flex;align-items:center;
+  transition:background .4s var(--ease-soft), border-color .4s var(--ease-soft), height .4s var(--ease-soft);
+  border-bottom:1px solid transparent;
+}
+.nav.scrolled{background:rgba(247,244,237,.92);backdrop-filter:blur(14px);border-bottom-color:var(--line);height:62px}
+.nav__in{display:flex;align-items:center;justify-content:space-between;gap:1.2rem;width:100%}
+
+.logo{display:flex;align-items:center;gap:.62rem;text-decoration:none;flex:none}
+.logo svg{width:34px;height:34px;flex:none}
+.mark-path{fill:none;stroke:var(--moss);stroke-width:1.35;stroke-linecap:round}
+.mark-dot{fill:var(--clay)}
+.logo__t{display:flex;flex-direction:column;line-height:1.08}
+.logo__n{font-family:'Lora',serif;font-size:1.02rem;font-weight:500;letter-spacing:.005em}
+.logo__r{font-size:.6rem;letter-spacing:.22em;text-transform:uppercase;color:var(--faint);font-weight:400}
+
+.nav__links{display:flex;gap:1.9rem;align-items:center}
+.nav__links a{
+  text-decoration:none;font-size:.855rem;color:var(--ink-2);letter-spacing:.005em;
+  position:relative;padding-block:.3rem;transition:color .25s;
+}
+.nav__links a::after{
+  content:'';position:absolute;left:0;right:0;bottom:0;height:1px;background:var(--moss);
+  transform:scaleX(0);transform-origin:0 50%;transition:transform .38s var(--ease);
+}
+.nav__links a:hover{color:var(--moss-deep)}
+.nav__links a:hover::after{transform:scaleX(1)}
+@media (max-width:1000px){ .nav__links{display:none} }
+
+.nav__right{display:flex;align-items:center;gap:.85rem;flex:none}
+
+/* ── izvēlne mazākos ekrānos ──────────────────────────────── */
+.menubtn{
+  display:none;align-items:center;justify-content:center;cursor:pointer;
+  width:2.4rem;height:2.4rem;border:1px solid var(--line-2);border-radius:999px;
+  background:rgba(255,255,255,.5);transition:border-color .3s;
+}
+.menubtn:hover{border-color:var(--ink)}
+.menubtn svg{width:18px;height:18px;fill:none;stroke:var(--ink);stroke-width:1.7;stroke-linecap:round}
+.menubtn .x{display:none}
+.menubtn[aria-expanded="true"] .b{display:none}
+.menubtn[aria-expanded="true"] .x{display:block}
+@media (max-width:1000px){ .menubtn{display:inline-flex} }
+
+.mobmenu{
+  position:fixed;top:calc(var(--bar) + var(--nav));left:0;right:0;z-index:105;
+  background:var(--paper);border-bottom:1px solid var(--line);
+  box-shadow:0 22px 44px -30px rgba(23,33,29,.4);
+  display:none;padding:.6rem 0 1.2rem;max-height:calc(100vh - var(--bar) - var(--nav));overflow-y:auto;
+}
+.mobmenu.open{display:block}
+.mobmenu a{display:block;text-decoration:none;font-weight:500;font-size:1.02rem;
+  padding:.8rem .2rem;border-bottom:1px solid var(--line)}
+.mobmenu a:last-of-type{border-bottom:0}
+.mobmenu .btn{width:100%;margin-top:.9rem;justify-content:center}
+
+/* valodu pārslēgs */
+.lang{
+  position:relative;display:flex;padding:3px;border:1px solid var(--line-2);border-radius:999px;
+  background:rgba(255,255,255,.5);
+}
+.lang__pill{
+  position:absolute;top:3px;bottom:3px;border-radius:999px;background:var(--ink);
+  transition:transform .42s var(--ease), width .42s var(--ease);z-index:0;
+}
+.lang button{
+  position:relative;z-index:1;border:0;background:none;cursor:pointer;
+  padding:.24rem .58rem;font-size:.7rem;letter-spacing:.13em;text-transform:uppercase;
+  color:var(--mute);font-weight:500;transition:color .3s;border-radius:999px;
+}
+.lang button[aria-pressed="true"]{color:var(--paper)}
+
+.btn{
+  display:inline-flex;align-items:center;gap:.6rem;cursor:pointer;
+  padding:.72rem 1.35rem;border-radius:999px;border:1px solid transparent;
+  font-size:.86rem;font-weight:500;letter-spacing:.008em;text-decoration:none;
+  transition:background .3s var(--ease-soft), color .3s, border-color .3s, transform .3s var(--ease);
+}
+.btn--fill{background:var(--ink);color:var(--paper)}
+.btn--fill:hover{background:var(--moss-deep);transform:translateY(-1px)}
+.btn--clay{background:var(--clay);color:#FFF7F2}
+.btn--clay:hover{background:var(--clay-deep);transform:translateY(-1px)}
+.btn--line{border-color:var(--line-2);color:var(--ink-2)}
+.btn--line:hover{border-color:var(--ink);background:rgba(255,255,255,.6);transform:translateY(-1px)}
+.btn--sm{padding:.54rem 1.05rem;font-size:.8rem}
+.btn__ar{width:14px;height:14px;flex:none;transition:transform .34s var(--ease)}
+.btn:hover .btn__ar{transform:translateX(3px)}
+@media (max-width:640px){ .nav .btn--fill{display:none} }
+
+/* ── vertikālais pavediens (paraksta elements) ────────────── */
+.thread{
+  position:absolute;left:50%;transform:translateX(-50%);top:0;
+  width:280px;pointer-events:none;z-index:0;
+}
+.thread svg{width:100%;height:100%;display:block;overflow:visible}
+.thread path{fill:none;stroke:var(--line-2);stroke-width:1.1;stroke-linecap:round}
+.thread .th-a{stroke:var(--moss);opacity:.34}
+
+/* ── hero ─────────────────────────────────────────────────── */
+.hero{position:relative;padding:calc(var(--nav) + 5.2rem) 0 5.4rem;overflow:hidden}
+.hero::before{
+  content:'';position:absolute;top:-16%;right:-12%;width:56vw;height:56vw;max-width:760px;max-height:760px;
+  background:radial-gradient(circle at 50% 50%, rgba(62,107,86,.11), rgba(62,107,86,0) 66%);
+  border-radius:50%;pointer-events:none;
+}
+.hero::after{
+  content:'';position:absolute;bottom:-24%;left:-16%;width:48vw;height:48vw;max-width:620px;max-height:620px;
+  background:radial-gradient(circle at 50% 50%, rgba(180,98,60,.09), rgba(180,98,60,0) 68%);
+  border-radius:50%;pointer-events:none;
+}
+.hero__grid{position:relative;z-index:2;display:grid;grid-template-columns:1.28fr .82fr;gap:4.2rem;align-items:center}
+@media (max-width:940px){ .hero__grid{grid-template-columns:1fr;gap:3rem} }
+
+.eyebrow{
+  font-size:.7rem;letter-spacing:.24em;text-transform:uppercase;color:var(--moss);
+  font-weight:500;margin-bottom:1.5rem;display:block;
+}
+.hero h1{
+  font-size:clamp(2.35rem,5.6vw,4.05rem);line-height:1.1;margin-bottom:1.65rem;
+  letter-spacing:-.02em;max-width:16ch;
+}
+.hero h1 .em{font-style:italic;color:var(--moss-deep)}
+.hero__lead{font-size:1.075rem;color:var(--ink-2);max-width:47ch;margin-bottom:2.1rem;line-height:1.66}
+.hero__cta{display:flex;flex-wrap:wrap;gap:.85rem;margin-bottom:2.2rem}
+
+.langnote{
+  display:inline-flex;align-items:center;gap:.7rem;padding:.62rem 1.05rem;
+  border:1px solid var(--line);border-radius:var(--r);background:rgba(255,255,255,.55);
+  font-size:.815rem;color:var(--mute);
+}
+.langnote__tags{display:flex;gap:.34rem}
+.langnote__tags span{
+  font-size:.64rem;letter-spacing:.13em;font-weight:600;color:var(--moss-deep);
+  background:var(--moss-soft);padding:.14rem .42rem;border-radius:2px;
+}
+
+/* portrets */
+.portrait{position:relative}
+.portrait__frame{
+  position:relative;aspect-ratio:4/5;height:auto;border-radius:calc(var(--r) * 2);
+  overflow:hidden;background:var(--paper-3);border:1px solid var(--line);
+  display:grid;place-items:center;
+}
+.portrait__ph{text-align:center;padding:2rem;color:var(--faint)}
+.portrait__ph svg{width:74px;height:74px;margin:0 auto 1.05rem;display:block;opacity:.5}
+.portrait__ph span{font-size:.74rem;letter-spacing:.16em;text-transform:uppercase;line-height:1.7;display:block}
+.portrait__tag{
+  position:absolute;bottom:-16px;left:-16px;background:var(--ink);color:var(--paper);
+  padding:.72rem 1.05rem;border-radius:var(--r);font-size:.78rem;line-height:1.42;max-width:190px;
+}
+.portrait__tag b{display:block;font-weight:500;font-family:'Lora',serif;font-size:.92rem;margin-bottom:.12rem}
+@media (max-width:940px){ .portrait{max-width:380px;margin-inline:auto} }
+
+/* ── sekciju pamats ───────────────────────────────────────── */
+section{position:relative}
+.sec{padding:5.6rem 0;position:relative}
+.sec--alt{background:var(--paper-2)}
+.sec--ink{background:var(--ink);color:var(--paper)}
+.sec--ink .eyebrow{color:#8FB8A3}
+.sec--ink .sec__lead{color:#C4CCC7}
+
+.sec__head{margin-bottom:3.2rem;max-width:62ch}
+.sec__head h2{font-size:clamp(1.75rem,3.5vw,2.65rem);margin-bottom:1.05rem;letter-spacing:-.018em}
+.sec__lead{color:var(--mute);font-size:1.015rem;max-width:52ch;line-height:1.68}
+
+.rule{height:1px;background:var(--line);border:0;margin:0}
+
+/* ── divi virzieni ────────────────────────────────────────── */
+.paths{display:grid;grid-template-columns:1fr 1fr;gap:1.5rem}
+@media (max-width:820px){ .paths{grid-template-columns:1fr} }
+.path{
+  position:relative;padding:2.5rem 2.2rem 2.2rem;border:1px solid var(--line);
+  border-radius:calc(var(--r) * 2);background:var(--paper);text-decoration:none;
+  display:flex;flex-direction:column;gap:1rem;overflow:hidden;
+  transition:border-color .4s var(--ease), transform .4s var(--ease), box-shadow .4s var(--ease);
+}
+.path::before{
+  content:'';position:absolute;inset:auto 0 0 0;height:2px;background:var(--moss);
+  transform:scaleX(0);transform-origin:0 50%;transition:transform .5s var(--ease);
+}
+.path:hover{border-color:var(--line-2);transform:translateY(-3px);box-shadow:0 18px 44px -28px rgba(23,33,29,.34)}
+.path:hover::before{transform:scaleX(1)}
+.path--b::before{background:var(--clay)}
+.path__n{
+  font-size:.68rem;letter-spacing:.2em;text-transform:uppercase;color:var(--faint);font-weight:500;
+}
+.path h3{font-size:1.62rem;letter-spacing:-.012em}
+.path p{color:var(--mute);font-size:.955rem}
+.path__go{
+  margin-top:auto;padding-top:1.15rem;display:flex;align-items:center;gap:.5rem;
+  font-size:.845rem;font-weight:500;color:var(--moss-deep);
+}
+.path--b .path__go{color:var(--clay-deep)}
+.path__go svg{width:15px;height:15px;transition:transform .34s var(--ease)}
+.path:hover .path__go svg{transform:translateX(4px)}
+
+/* ── tēmu čipi ────────────────────────────────────────────── */
+.chips{display:flex;flex-wrap:wrap;gap:.55rem;margin-top:.4rem}
+.chip{
+  padding:.5rem .95rem;border:1px solid var(--line);border-radius:999px;
+  font-size:.865rem;color:var(--ink-2);background:var(--paper);
+  transition:border-color .3s, background .3s, transform .3s var(--ease);
+}
+.chip:hover{border-color:var(--moss);background:var(--moss-soft);transform:translateY(-2px)}
+
+/* aizvietojama satura marķieris */
+.ph{
+  border-bottom:1px dashed var(--clay);padding-bottom:1px;
+  color:inherit;cursor:help;
+}
+.phbox{
+  border:1px dashed var(--line-2);border-radius:var(--r);padding:1.15rem 1.3rem;
+  background:rgba(180,98,60,.04);
+}
+.phtag{
+  display:inline-flex;align-items:center;gap:.42rem;
+  font-size:.66rem;letter-spacing:.15em;text-transform:uppercase;color:var(--clay-deep);
+  font-weight:600;margin-bottom:.7rem;
+}
+.phtag::before{content:'';width:5px;height:5px;border-radius:50%;background:var(--clay)}
+
+/* ── divkolonnu bloks ─────────────────────────────────────── */
+.split{display:grid;grid-template-columns:.9fr 1.1fr;gap:4rem;align-items:start}
+@media (max-width:900px){ .split{grid-template-columns:1fr;gap:2.4rem} }
+
+.deflist{display:grid;gap:0;border-top:1px solid var(--line)}
+.deflist div{
+  display:grid;grid-template-columns:auto 1fr;gap:1.6rem;padding:1.05rem 0;
+  border-bottom:1px solid var(--line);align-items:baseline;
+}
+.deflist dt{font-size:.7rem;letter-spacing:.16em;text-transform:uppercase;color:var(--faint);font-weight:500;min-width:98px}
+.deflist dd{margin:0;color:var(--ink-2);font-size:.955rem}
+
+/* ── soļi ─────────────────────────────────────────────────── */
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;counter-reset:s}
+@media (max-width:820px){ .steps{grid-template-columns:1fr} }
+.step{position:relative;padding-top:2.6rem}
+.step::before{
+  counter-increment:s;content:counter(s,decimal-leading-zero);
+  position:absolute;top:0;left:0;font-family:'Lora',serif;font-size:1.05rem;
+  color:var(--moss);letter-spacing:.02em;
+}
+.step::after{
+  content:'';position:absolute;top:.62rem;left:2.4rem;right:1rem;height:1px;background:var(--line);
+}
+@media (max-width:820px){ .step::after{display:none} }
+.step h4{font-size:1.08rem;margin-bottom:.5rem}
+.step p{color:var(--mute);font-size:.93rem}
+
+/* ── semināru kartes ──────────────────────────────────────── */
+.aud{display:grid;grid-template-columns:repeat(3,1fr);gap:1.4rem}
+@media (max-width:900px){ .aud{grid-template-columns:1fr} }
+.audc{
+  padding:2.1rem 1.9rem;border-radius:calc(var(--r) * 2);
+  background:rgba(255,255,255,.05);border:1px solid rgba(244,240,233,.13);
+  display:flex;flex-direction:column;gap:.85rem;
+  transition:background .4s var(--ease-soft), border-color .4s, transform .4s var(--ease);
+}
+.audc:hover{background:rgba(255,255,255,.09);border-color:rgba(244,240,233,.26);transform:translateY(-3px)}
+.audc__ic{width:38px;height:38px;color:#8FB8A3;margin-bottom:.3rem}
+.audc__ic svg{width:100%;height:100%;fill:none;stroke:currentColor;stroke-width:1.2;stroke-linecap:round;stroke-linejoin:round}
+.audc h3{font-size:1.34rem;color:var(--paper)}
+.audc p{color:#B7C1BB;font-size:.935rem}
+.audc ul{margin:.35rem 0 0;padding:0;list-style:none;display:grid;gap:.42rem}
+.audc li{font-size:.875rem;color:#9FACA5;padding-left:1.05rem;position:relative}
+.audc li::before{content:'';position:absolute;left:0;top:.62em;width:5px;height:1px;background:#8FB8A3}
+
+.metastrip{
+  display:flex;flex-wrap:wrap;gap:.5rem 2.1rem;margin-top:2.6rem;padding-top:1.7rem;
+  border-top:1px solid rgba(244,240,233,.15);font-size:.86rem;color:#B7C1BB;
+}
+.metastrip span{display:inline-flex;align-items:center;gap:.55rem}
+.metastrip span::before{content:'';width:4px;height:4px;border-radius:50%;background:#8FB8A3;flex:none}
+
+/* ═══ PIETEIKŠANĀS ════════════════════════════════════════ */
+.book{
+  border:1px solid var(--line);border-radius:calc(var(--r) * 3);background:var(--paper);
+  overflow:hidden;box-shadow:0 26px 70px -50px rgba(23,33,29,.5);
+}
+.book__bar{
+  display:flex;align-items:center;gap:.9rem;padding:1.05rem 1.6rem;
+  background:var(--paper-2);border-bottom:1px solid var(--line);flex-wrap:wrap;
+}
+.book__steps{display:flex;align-items:center;gap:.55rem;flex-wrap:wrap;flex:1}
+.bstep{display:flex;align-items:center;gap:.5rem;font-size:.79rem;color:var(--faint);transition:color .35s}
+.bstep__n{
+  width:22px;height:22px;border-radius:50%;display:grid;place-items:center;flex:none;
+  border:1px solid var(--line-2);font-size:.68rem;font-weight:600;
+  transition:background .35s var(--ease-soft), border-color .35s, color .35s;
+}
+.bstep.on{color:var(--ink)}
+.bstep.on .bstep__n{background:var(--ink);border-color:var(--ink);color:var(--paper)}
+.bstep.done{color:var(--moss-deep)}
+.bstep.done .bstep__n{background:var(--moss);border-color:var(--moss);color:#fff}
+.bstep__sep{width:16px;height:1px;background:var(--line-2);flex:none}
+@media (max-width:720px){ .bstep__lb{display:none} .bstep__sep{width:10px} }
+
+.book__body{padding:2.2rem 1.9rem 2.1rem;min-height:400px;position:relative}
+@media (max-width:560px){ .book__body{padding:1.7rem 1.15rem} }
+.panel{display:none}
+.panel.on{display:block}
+.panel__h{font-family:'Lora',serif;font-size:1.32rem;margin-bottom:.45rem;font-weight:500}
+.panel__s{color:var(--mute);font-size:.92rem;margin-bottom:1.7rem}
+
+/* izvēles kartes */
+.opts{display:grid;gap:.85rem}
+.opts--2{grid-template-columns:1fr 1fr}
+@media (max-width:660px){ .opts--2{grid-template-columns:1fr} }
+.opt{
+  display:flex;gap:1rem;align-items:flex-start;text-align:left;width:100%;
+  padding:1.25rem 1.35rem;border:1px solid var(--line);border-radius:calc(var(--r) * 2);
+  background:var(--paper);cursor:pointer;
+  transition:border-color .3s, background .3s, transform .3s var(--ease);
+}
+.opt:hover{border-color:var(--line-2);transform:translateY(-2px)}
+.opt[aria-pressed="true"]{border-color:var(--moss);background:var(--moss-soft)}
+.opt__tick{
+  width:19px;height:19px;border-radius:50%;border:1px solid var(--line-2);flex:none;margin-top:.2rem;
+  display:grid;place-items:center;transition:background .3s, border-color .3s;
+}
+.opt__tick svg{width:10px;height:10px;opacity:0;transition:opacity .25s;stroke:#fff;stroke-width:2.6;fill:none;stroke-linecap:round;stroke-linejoin:round}
+.opt[aria-pressed="true"] .opt__tick{background:var(--moss);border-color:var(--moss)}
+.opt[aria-pressed="true"] .opt__tick svg{opacity:1}
+.opt__t{display:block;font-weight:500;font-size:1rem;margin-bottom:.18rem}
+.opt__d{display:block;color:var(--mute);font-size:.87rem;line-height:1.52}
+
+/* kalendārs */
+.calwrap{display:grid;grid-template-columns:1.15fr .85fr;gap:2.2rem}
+@media (max-width:760px){ .calwrap{grid-template-columns:1fr;gap:1.8rem} }
+.calhead{display:flex;align-items:center;justify-content:space-between;margin-bottom:1.05rem}
+.calhead__m{font-family:'Lora',serif;font-size:1.08rem;font-weight:500}
+.calnav{display:flex;gap:.4rem}
+.calnav button{
+  width:30px;height:30px;border-radius:50%;border:1px solid var(--line);background:var(--paper);
+  cursor:pointer;display:grid;place-items:center;transition:border-color .3s, background .3s;
+}
+.calnav button:hover:not(:disabled){border-color:var(--ink);background:var(--paper-2)}
+.calnav button:disabled{opacity:.32;cursor:not-allowed}
+.calnav svg{width:12px;height:12px;fill:none;stroke:var(--ink-2);stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+
+.caldow{display:grid;grid-template-columns:repeat(7,1fr);gap:4px;margin-bottom:6px}
+.caldow span{
+  text-align:center;font-size:.64rem;letter-spacing:.1em;text-transform:uppercase;
+  color:var(--faint);font-weight:500;padding-bottom:.3rem;
+}
+.calgrid{display:grid;grid-template-columns:repeat(7,1fr);gap:4px}
+.cday{
+  aspect-ratio:1;border:1px solid transparent;border-radius:var(--r);background:none;
+  cursor:pointer;font-size:.9rem;color:var(--ink-2);position:relative;
+  display:grid;place-items:center;
+  transition:background .24s, border-color .24s, color .24s, transform .24s var(--ease);
+}
+.cday:hover:not(:disabled){background:var(--paper-3);transform:translateY(-1px)}
+.cday:disabled{color:var(--line-2);cursor:not-allowed}
+.cday.free::after{
+  content:'';position:absolute;bottom:5px;left:50%;transform:translateX(-50%);
+  width:4px;height:4px;border-radius:50%;background:var(--moss);
+}
+.cday.sel{background:var(--ink);border-color:var(--ink);color:var(--paper)}
+.cday.sel::after{background:var(--clay)}
+.cday.empty{visibility:hidden}
+.callegend{display:flex;gap:1.2rem;margin-top:1.1rem;font-size:.76rem;color:var(--faint);flex-wrap:wrap}
+.callegend span{display:inline-flex;align-items:center;gap:.4rem}
+.callegend i{width:5px;height:5px;border-radius:50%;background:var(--moss);display:inline-block}
+.callegend i.no{background:var(--line-2)}
+
+.slots__h{font-size:.7rem;letter-spacing:.16em;text-transform:uppercase;color:var(--faint);font-weight:500;margin-bottom:.95rem}
+.slots__grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(86px,1fr));gap:.5rem}
+.slot{
+  padding:.62rem .4rem;border:1px solid var(--line);border-radius:var(--r);background:var(--paper);
+  cursor:pointer;font-size:.885rem;font-variant-numeric:tabular-nums;
+  transition:border-color .26s, background .26s, color .26s, transform .26s var(--ease);
+}
+.slot:hover:not(:disabled){border-color:var(--moss);background:var(--moss-soft);transform:translateY(-2px)}
+.slot:disabled{color:var(--line-2);cursor:not-allowed;background:var(--paper-2);text-decoration:line-through}
+.slot[aria-pressed="true"]{background:var(--ink);border-color:var(--ink);color:var(--paper)}
+.slots__empty{color:var(--faint);font-size:.9rem;padding:1.4rem 0;line-height:1.6}
+
+/* forma */
+.form{display:grid;grid-template-columns:1fr 1fr;gap:1.05rem}
+@media (max-width:660px){ .form{grid-template-columns:1fr} }
+.field{display:flex;flex-direction:column;gap:.38rem}
+.field--full{grid-column:1/-1}
+.field label{font-size:.72rem;letter-spacing:.11em;text-transform:uppercase;color:var(--mute);font-weight:500}
+.field input,.field select,.field textarea{
+  font:inherit;font-size:.95rem;padding:.78rem .95rem;border:1px solid var(--line);
+  border-radius:var(--r);background:var(--paper);color:var(--ink);width:100%;
+  transition:border-color .3s, background .3s, box-shadow .3s;
+}
+.field input:focus,.field select:focus,.field textarea:focus{
+  outline:none;border-color:var(--moss);box-shadow:0 0 0 3px var(--moss-soft);background:#fff;
+}
+.field textarea{resize:vertical;min-height:96px;line-height:1.6}
+.field select{appearance:none;
+  background-image:url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 8'%3E%3Cpath d='M1 1.5 6 6.5 11 1.5' fill='none' stroke='%2366756D' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+  background-repeat:no-repeat;background-position:right .95rem center;background-size:11px;padding-right:2.4rem;
+}
+.hp{position:absolute;left:-9999px;opacity:0;height:0;width:0}
+
+/* kopsavilkums */
+.summary{
+  border:1px solid var(--line);border-radius:calc(var(--r) * 2);background:var(--paper-2);
+  padding:1.3rem 1.45rem;display:grid;gap:.62rem;
+}
+.summary__r{display:flex;justify-content:space-between;gap:1.4rem;font-size:.905rem;align-items:baseline}
+.summary__r dt{color:var(--mute);flex:none}
+.summary__r dd{margin:0;text-align:right;font-weight:500}
+.summary__r.big dd{font-family:'Lora',serif;font-size:1.06rem}
+
+.book__foot{
+  display:flex;align-items:center;justify-content:space-between;gap:1rem;
+  padding:1.15rem 1.9rem;border-top:1px solid var(--line);background:var(--paper-2);flex-wrap:wrap;
+}
+.book__note{font-size:.79rem;color:var(--faint);max-width:38ch;line-height:1.5}
+.book__acts{display:flex;gap:.6rem;margin-left:auto}
+@media (max-width:560px){ .book__foot{padding:1.05rem 1.15rem} .book__acts{width:100%} .book__acts .btn{flex:1;justify-content:center} }
+
+/* apstiprinājums */
+.done{text-align:center;padding:1.4rem 0 .4rem}
+.done__ic{width:62px;height:62px;margin:0 auto 1.35rem;border-radius:50%;background:var(--moss-soft);display:grid;place-items:center}
+.done__ic svg{width:26px;height:26px;fill:none;stroke:var(--moss-deep);stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.done h3{font-size:1.55rem;margin-bottom:.7rem}
+.done p{color:var(--mute);max-width:46ch;margin:0 auto 1.9rem;font-size:.95rem}
+.done .summary{text-align:left;max-width:440px;margin:0 auto 1.6rem}
+.demonote{
+  display:inline-flex;align-items:center;gap:.55rem;padding:.6rem 1rem;border-radius:var(--r);
+  background:var(--clay-soft);color:var(--clay-deep);font-size:.81rem;font-weight:450;
+}
+
+/* ── BUJ ──────────────────────────────────────────────────── */
+.faq{border-top:1px solid var(--line)}
+.faq__i{border-bottom:1px solid var(--line)}
+.faq__q{
+  width:100%;background:none;border:0;cursor:pointer;text-align:left;
+  padding:1.35rem 2.6rem 1.35rem 0;position:relative;
+  font-family:'Lora',serif;font-size:1.075rem;font-weight:500;color:var(--ink);line-height:1.42;
+  transition:color .3s;
+}
+.faq__q:hover{color:var(--moss-deep)}
+.faq__q::before,.faq__q::after{
+  content:'';position:absolute;right:.35rem;top:50%;background:var(--moss);
+  transition:transform .4s var(--ease), opacity .3s;
+}
+.faq__q::before{width:13px;height:1.5px;transform:translateY(-50%)}
+.faq__q::after{width:1.5px;height:13px;right:calc(.35rem + 5.75px);transform:translateY(-50%)}
+.faq__i.open .faq__q::after{transform:translateY(-50%) rotate(90deg);opacity:0}
+.faq__a{overflow:hidden;height:0}
+.faq__a p{padding:0 3rem 1.5rem 0;color:var(--mute);font-size:.955rem;max-width:66ch}
+
+/* ── kontakti ─────────────────────────────────────────────── */
+.contact{display:grid;grid-template-columns:1fr 1fr;gap:3.4rem;align-items:start}
+@media (max-width:820px){ .contact{grid-template-columns:1fr;gap:2.2rem} }
+.cbox{display:grid;gap:1.15rem}
+.crow{display:grid;grid-template-columns:auto 1fr;gap:1rem;align-items:start}
+.crow__ic{width:34px;height:34px;border-radius:50%;background:var(--paper-3);display:grid;place-items:center;flex:none}
+.crow__ic svg{width:15px;height:15px;fill:none;stroke:var(--moss-deep);stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round}
+.crow__t span{display:block;font-size:.68rem;letter-spacing:.15em;text-transform:uppercase;color:var(--faint);margin-bottom:.14rem}
+.crow__t a,.crow__t b{font-size:1rem;font-weight:450;text-decoration:none;color:var(--ink);border-bottom:1px solid var(--line-2);transition:border-color .3s}
+.crow__t a:hover{border-color:var(--moss)}
+.crow__t b{border:0;font-weight:450}
+
+/* ── kājene ───────────────────────────────────────────────── */
+.foot{padding:2.6rem 0;border-top:1px solid var(--line);background:var(--paper-2)}
+.foot__in{display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap;font-size:.83rem;color:var(--mute)}
+.foot__in a{color:var(--moss-deep)}
+
+/* ── atklāšanās (JS pārņem, ja ielādējas) ─────────────────── */
+html.no-anim [data-rv]{opacity:1 !important;transform:none !important;filter:none !important}
+html.no-anim .thread{display:none}
+
+/* ── izlaist uz saturu ────────────────────────────────────── */
+.skip{
+  position:absolute;left:-9999px;top:0;background:var(--ink);color:var(--paper);
+  padding:.7rem 1.1rem;z-index:200;border-radius:0 0 var(--r) 0;
+}
+.skip:focus{left:0}
+:focus-visible{outline:2px solid var(--moss);outline-offset:3px;border-radius:2px}
+</style>
+</head>
+<body>
+
+<a class="skip" href="#main" data-i18n="skip">Pāriet uz saturu</a>
+
+<div class="demobar">
+  <span class="dot"></span>
+  <span data-i18n-html="demobar">Melnraksts — <b>rast studija</b> — nav publicēts</span>
+</div>
+<div class="progress" id="progress"></div>
+
+<!-- ═══════════════ NAVIGĀCIJA ═══════════════ -->
+<header class="nav" id="nav">
+  <div class="wrap nav__in">
+    <a class="logo" href="#top">
+      <svg viewBox="0 0 40 40" aria-hidden="true">
+        <path class="mark-path" d="M8 30 C 8 16 14 9 20 9 C 26 9 32 16 32 30" />
+        <path class="mark-path" d="M14 30 C 14 21 17 16 20 16 C 23 16 26 21 26 30" />
+        <circle class="mark-dot" cx="20" cy="33.5" r="2.1" />
+      </svg>
+      <span class="logo__t">
+        <span class="logo__n" data-i18n="name">Veronika Šilo</span>
+        <span class="logo__r" data-i18n="role">Psiholoģe</span>
+      </span>
+    </a>
+
+    <nav class="nav__links" aria-label="Galvenā">
+      <a href="#konsultacijas" data-i18n="nav1">Konsultācijas</a>
+      <a href="#seminari" data-i18n="nav2">Semināri</a>
+      <a href="#ka-notiek" data-i18n="nav3">Kā notiek</a>
+      <a href="#par-mani" data-i18n="nav4">Par mani</a>
+      <a href="#buj" data-i18n="nav5">BUJ</a>
+    </nav>
+
+    <div class="nav__right">
+      <div class="lang" id="lang" role="group" aria-label="Valoda">
+        <span class="lang__pill" id="langPill"></span>
+        <button type="button" data-lang="lv" aria-pressed="true">LV</button>
+        <button type="button" data-lang="ru" aria-pressed="false">RU</button>
+        <button type="button" data-lang="en" aria-pressed="false">EN</button>
+      </div>
+      <a class="btn btn--fill btn--sm" href="#pieteikties" data-i18n="cta_book">Pieteikties</a>
+      <button class="menubtn" id="menuBtn" type="button" aria-expanded="false" aria-controls="mobmenu" aria-label="Izvēlne">
+        <svg class="b" viewBox="0 0 20 20" aria-hidden="true"><path d="M3 6h14M3 10h14M3 14h14"/></svg>
+        <svg class="x" viewBox="0 0 20 20" aria-hidden="true"><path d="M5 5l10 10M15 5L5 15"/></svg>
+      </button>
+    </div>
+  </div>
+</header>
+
+<nav class="mobmenu" id="mobmenu" aria-label="Izvēlne">
+  <div class="wrap">
+    <a href="#konsultacijas" data-i18n="nav1">Konsultācijas</a>
+    <a href="#seminari" data-i18n="nav2">Semināri</a>
+    <a href="#ka-notiek" data-i18n="nav3">Kā notiek</a>
+    <a href="#par-mani" data-i18n="nav4">Par mani</a>
+    <a href="#buj" data-i18n="nav5">BUJ</a>
+    <a href="#kontakti" data-i18n="nav6">Kontakti</a>
+    <a class="btn btn--clay" href="#pieteikties" data-i18n="cta_book">Pieteikties</a>
+  </div>
+</nav>
+
+<main id="main">
+<a id="top"></a>
+
+<!-- ═══════════════ HERO ═══════════════ -->
+<section class="hero">
+  <div class="wrap hero__grid">
+    <div>
+      <span class="eyebrow" id="eyebrow" data-i18n="hero_eyebrow">Psiholoģe · konsultācijas un semināri</span>
+      <h1 id="heroTitle">Strādājam ar konkrētu tēmu, nevis ar visu uzreiz.</h1>
+      <p class="hero__lead" data-i18n="hero_lead">Individuālas psihologa konsultācijas un semināri skolām, uzņēmumiem un vecākiem. Klātienē vai attālināti.</p>
+      <div class="hero__cta">
+        <a class="btn btn--clay" href="#pieteikties" data-book-preset="ind">
+          <span data-i18n="hero_cta1">Pieteikt konsultāciju</span>
+          <svg class="btn__ar" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M2 8h11M9 4l4 4-4 4"/></svg>
+        </a>
+        <a class="btn btn--line" href="#seminari" data-i18n="hero_cta2">Semināri organizācijām</a>
+      </div>
+      <div class="langnote">
+        <span class="langnote__tags"><span>LV</span><span>RU</span><span>EN</span></span>
+        <span data-i18n="hero_langnote">Konsultācijas un semināri notiek visās trīs valodās</span>
+      </div>
+    </div>
+
+    <div class="portrait">
+      <div class="portrait__frame" id="portraitFrame">
+        <div class="portrait__ph" id="portraitImg">
+          <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="1.1" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <circle cx="32" cy="24" r="11"/>
+            <path d="M11 57c0-11.6 9.4-21 21-21s21 9.4 21 21"/>
+          </svg>
+          <span data-i18n-html="portrait_ph">Šeit būs<br>Veronikas foto</span>
+        </div>
+      </div>
+      <div class="portrait__tag">
+        <b data-i18n="portrait_tag_t">Veronika Šilo</b>
+        <span data-i18n="portrait_tag_s">Psiholoģe · LV / RU / EN</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════ DIVI VIRZIENI ═══════════════ -->
+<section class="sec sec--alt">
+  <div class="wrap">
+    <div class="sec__head" data-rv>
+      <span class="eyebrow" data-i18n="paths_eyebrow">Divi virzieni</span>
+      <h2 data-i18n="paths_h">Divi veidi, kā sākt.</h2>
+      <p class="sec__lead" data-i18n="paths_lead">Viens cilvēks ar savu tēmu vai vesela grupa — skolas kolektīvs, komanda darbā, vecāku sapulce. Darbs abos gadījumos sākas ar vienu jautājumu: kas tieši ir jārisina.</p>
+    </div>
+
+    <div class="paths">
+      <a class="path" href="#konsultacijas" data-rv>
+        <span class="path__n">01</span>
+        <h3 data-i18n="path1_h">Individuālas konsultācijas</h3>
+        <p data-i18n="path1_p">Viens cilvēks, viena tēma, savs temps. Var pieteikties uz vienu reizi — nav jāapņemas uz garu procesu.</p>
+        <span class="path__go">
+          <span data-i18n="path1_go">Apskatīt tēmas</span>
+          <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M2 8h11M9 4l4 4-4 4"/></svg>
+        </span>
+      </a>
+      <a class="path path--b" href="#seminari" data-rv>
+        <span class="path__n">02</span>
+        <h3 data-i18n="path2_h">Semināri un lekcijas</h3>
+        <p data-i18n="path2_p">Grupai — skolas kolektīvam, uzņēmuma komandai vai vecākiem. Saturu pielāgoju konkrētajai auditorijai.</p>
+        <span class="path__go">
+          <span data-i18n="path2_go">Apskatīt programmas</span>
+          <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M2 8h11M9 4l4 4-4 4"/></svg>
+        </span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════ KONSULTĀCIJAS ═══════════════ -->
+<section class="sec" id="konsultacijas">
+  <div class="wrap">
+    <div class="split">
+      <div data-rv>
+        <span class="eyebrow" data-i18n="ind_eyebrow">01 · Individuāli</span>
+        <h2 style="font-size:clamp(1.75rem,3.5vw,2.5rem);margin-bottom:1.05rem" data-i18n="ind_h">Individuālas konsultācijas</h2>
+        <p class="sec__lead" style="margin-bottom:1.9rem" data-i18n="ind_lead">Konsultācija ir saruna par vienu skaidri nosauktu tēmu. Pirmajā reizē to nosaucam kopā, tālāk strādājam ar to.</p>
+
+        <dl class="deflist">
+          <div>
+            <dt data-i18n="ind_d1">Formāts</dt>
+            <dd data-i18n="ind_v1">Attālināti (video) vai klātienē</dd>
+          </div>
+          <div>
+            <dt data-i18n="ind_d2">Ilgums</dt>
+            <dd><span class="ph" data-i18n="ind_v2">50–60 minūtes</span></dd>
+          </div>
+          <div>
+            <dt data-i18n="ind_d3">Valoda</dt>
+            <dd data-i18n="ind_v3">Latviešu, krievu vai angļu</dd>
+          </div>
+          <div>
+            <dt data-i18n="ind_d4">Maksa</dt>
+            <dd><span class="ph" data-i18n="ind_v4">Norādāma pirms publicēšanas</span></dd>
+          </div>
+        </dl>
+      </div>
+
+      <div data-rv>
+        <div class="phbox">
+          <span class="phtag" data-i18n="ph_topics">Tēmu saraksts — paraugs</span>
+          <p style="font-size:.9rem;color:var(--mute);margin-bottom:1.15rem" data-i18n="ind_topics_note">Šis ir piemērs, kā tēmas izskatīsies lapā. Gala sarakstu veidojam no Jūsu tēmām — pievienojam, izņemam un pārkārtojam pēc vajadzības.</p>
+          <div class="chips" id="topicChips">
+            <span class="chip" data-i18n="t1">Trauksme un spriedze</span>
+            <span class="chip" data-i18n="t2">Attiecības ģimenē</span>
+            <span class="chip" data-i18n="t3">Vecāku un bērna attiecības</span>
+            <span class="chip" data-i18n="t4">Pusaudžu vecumposms</span>
+            <span class="chip" data-i18n="t5">Pašvērtējums</span>
+            <span class="chip" data-i18n="t6">Izdegšana darbā</span>
+            <span class="chip" data-i18n="t7">Zaudējums un sēras</span>
+            <span class="chip" data-i18n="t8">Grūtības mācībās</span>
+            <span class="chip" data-i18n="t9">Konflikti kolektīvā</span>
+            <span class="chip" data-i18n="t10">Pārmaiņas dzīvē</span>
+          </div>
+        </div>
+
+        <div style="margin-top:1.6rem;display:flex;gap:.8rem;flex-wrap:wrap">
+          <a class="btn btn--fill" href="#pieteikties" data-book-preset="ind">
+            <span data-i18n="ind_cta">Izvēlēties laiku</span>
+            <svg class="btn__ar" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M2 8h11M9 4l4 4-4 4"/></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════ SEMINĀRI ═══════════════ -->
+<section class="sec sec--ink" id="seminari">
+  <div class="wrap">
+    <div class="sec__head" data-rv>
+      <span class="eyebrow" data-i18n="sem_eyebrow">02 · Grupām</span>
+      <h2 style="color:var(--paper)" data-i18n="sem_h">Semināri un lekcijas</h2>
+      <p class="sec__lead" data-i18n="sem_lead">Semināru saturu veidoju pēc tā, kas grupā notiek patiesībā. Pirms pasākuma vienojamies par tēmu, dalībnieku skaitu un ilgumu.</p>
+    </div>
+
+    <div class="aud">
+      <div class="audc" data-rv>
+        <div class="audc__ic">
+          <svg viewBox="0 0 32 32" aria-hidden="true"><path d="M16 6 3 12l13 6 13-6-13-6Z"/><path d="M8 15v7c0 2.2 3.6 4 8 4s8-1.8 8-4v-7"/><path d="M29 12v8"/></svg>
+        </div>
+        <h3 data-i18n="aud1_h">Skolām</h3>
+        <p data-i18n="aud1_p">Skolotāju kolektīvam, atbalsta personālam un skolēniem.</p>
+        <ul>
+          <li data-i18n="aud1_l1">Saskarsme un konflikti klasē</li>
+          <li data-i18n="aud1_l2">Emociju pašregulācija</li>
+          <li data-i18n="aud1_l3">Pusaudžu vecumposms</li>
+          <li data-i18n="aud1_l4">Skolotāja noturība un slodze</li>
+        </ul>
+      </div>
+
+      <div class="audc" data-rv>
+        <div class="audc__ic">
+          <svg viewBox="0 0 32 32" aria-hidden="true"><rect x="4" y="10" width="24" height="17" rx="2"/><path d="M11 10V7a2 2 0 0 1 2-2h6a2 2 0 0 1 2 2v3"/><path d="M4 17h24"/></svg>
+        </div>
+        <h3 data-i18n="aud2_h">Uzņēmumiem</h3>
+        <p data-i18n="aud2_p">Komandām un vadītājiem — praktiski, ar situācijām no darba ikdienas.</p>
+        <ul>
+          <li data-i18n="aud2_l1">Spriedze un izdegšana darbā</li>
+          <li data-i18n="aud2_l2">Sarežģītas sarunas</li>
+          <li data-i18n="aud2_l3">Komunikācija komandā</li>
+          <li data-i18n="aud2_l4">Robežas un slodzes sadale</li>
+        </ul>
+      </div>
+
+      <div class="audc" data-rv>
+        <div class="audc__ic">
+          <svg viewBox="0 0 32 32" aria-hidden="true"><circle cx="11" cy="10" r="4.5"/><circle cx="22" cy="12" r="3.5"/><path d="M3 26c0-4.4 3.6-8 8-8s8 3.6 8 8"/><path d="M20 19c3.9 0 7 3.1 7 7"/></svg>
+        </div>
+        <h3 data-i18n="aud3_h">Vecākiem</h3>
+        <p data-i18n="aud3_p">Vecāku sapulcēm un grupām — bez vainošanas, ar konkrētiem risinājumiem.</p>
+        <ul>
+          <li data-i18n="aud3_l1">Robežas un vienošanās mājās</li>
+          <li data-i18n="aud3_l2">Ekrāni un miegs</li>
+          <li data-i18n="aud3_l3">Mācību motivācija</li>
+          <li data-i18n="aud3_l4">Vecāka izdegšana</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="metastrip" data-rv>
+      <span data-i18n="sem_m1">Klātienē vai tiešsaistē</span>
+      <span class="ph" data-i18n="sem_m2">60–120 minūtes</span>
+      <span data-i18n="sem_m3">Latviešu, krievu vai angļu valodā</span>
+      <span class="ph" data-i18n="sem_m4">Maksa — pēc pieprasījuma</span>
+    </div>
+
+    <div style="margin-top:2.2rem" data-rv>
+      <a class="btn btn--clay" href="#pieteikties" data-book-preset="sem">
+        <span data-i18n="sem_cta">Pieteikt semināru</span>
+        <svg class="btn__ar" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M2 8h11M9 4l4 4-4 4"/></svg>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════ KĀ NOTIEK ═══════════════ -->
+<section class="sec" id="ka-notiek">
+  <div class="wrap">
+    <div class="sec__head" data-rv>
+      <span class="eyebrow" data-i18n="how_eyebrow">Pieteikšanās</span>
+      <h2 data-i18n="how_h">Kā notiek</h2>
+      <p class="sec__lead" data-i18n="how_lead">Bez zvanīšanas un gaidīšanas. Laiku izvēlaties paši, apstiprinājumu saņemat e-pastā.</p>
+    </div>
+
+    <div class="steps">
+      <div class="step" data-rv>
+        <h4 data-i18n="how1_h">Izvēlaties</h4>
+        <p data-i18n="how1_p">Norādāt, vai vēlaties individuālu konsultāciju vai semināru, un izvēlaties datumu un laiku no brīvajiem.</p>
+      </div>
+      <div class="step" data-rv>
+        <h4 data-i18n="how2_h">Saņemat apstiprinājumu</h4>
+        <p data-i18n="how2_p">E-pastā atnāk apstiprinājums ar laiku. Attālinātām sarunām — arī saite uz video zvanu.</p>
+      </div>
+      <div class="step" data-rv>
+        <h4 data-i18n="how3_h">Tiekamies</h4>
+        <p data-i18n="how3_p">Sarunu sākam ar to, kāpēc esat pieteicies. Ja laiks nederēs, to var pārcelt.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════ PIETEIKŠANĀS ═══════════════ -->
+<section class="sec sec--alt" id="pieteikties">
+  <div class="wrap">
+    <div class="sec__head" data-rv style="text-align:center;margin-inline:auto">
+      <span class="eyebrow" data-i18n="book_eyebrow">Tiešsaistes pieteikšanās</span>
+      <h2 data-i18n="book_h">Izvēlieties laiku</h2>
+      <p class="sec__lead" style="margin-inline:auto" data-i18n="book_lead">Četri soļi. Apstiprinājumu saņemat e-pastā uzreiz pēc pieteikuma.</p>
+    </div>
+
+    <div class="book" data-rv>
+      <!-- soļu josla -->
+      <div class="book__bar">
+        <div class="book__steps" id="bsteps">
+          <span class="bstep on" data-s="1"><span class="bstep__n">1</span><span class="bstep__lb" data-i18n="bs1">Pakalpojums</span></span>
+          <span class="bstep__sep"></span>
+          <span class="bstep" data-s="2"><span class="bstep__n">2</span><span class="bstep__lb" data-i18n="bs2">Datums un laiks</span></span>
+          <span class="bstep__sep"></span>
+          <span class="bstep" data-s="3"><span class="bstep__n">3</span><span class="bstep__lb" data-i18n="bs3">Kontaktinformācija</span></span>
+          <span class="bstep__sep"></span>
+          <span class="bstep" data-s="4"><span class="bstep__n">4</span><span class="bstep__lb" data-i18n="bs4">Apstiprinājums</span></span>
+        </div>
+      </div>
+
+      <div class="book__body" id="bbody">
+
+        <!-- ── 1. solis ── -->
+        <div class="panel on" data-p="1">
+          <h3 class="panel__h" data-i18n="p1_h">Ko vēlaties pieteikt?</h3>
+          <p class="panel__s" data-i18n="p1_s">Izvēlieties pakalpojumu un formātu.</p>
+
+          <div class="opts opts--2" style="margin-bottom:1.7rem">
+            <button type="button" class="opt" data-svc="ind" aria-pressed="false">
+              <span class="opt__tick"><svg viewBox="0 0 12 12"><path d="M2 6.4 4.6 9 10 3.2"/></svg></span>
+              <span>
+                <span class="opt__t" data-i18n="p1_o1t">Individuāla konsultācija</span>
+                <span class="opt__d" data-i18n="p1_o1d">Saruna vienatnē par konkrētu tēmu</span>
+              </span>
+            </button>
+            <button type="button" class="opt" data-svc="sem" aria-pressed="false">
+              <span class="opt__tick"><svg viewBox="0 0 12 12"><path d="M2 6.4 4.6 9 10 3.2"/></svg></span>
+              <span>
+                <span class="opt__t" data-i18n="p1_o2t">Seminārs grupai</span>
+                <span class="opt__d" data-i18n="p1_o2d">Skolai, uzņēmumam vai vecākiem</span>
+              </span>
+            </button>
+          </div>
+
+          <p class="slots__h" data-i18n="p1_fmt">Formāts</p>
+          <div class="opts opts--2" style="margin-bottom:1.7rem">
+            <button type="button" class="opt" data-fmt="online" aria-pressed="false">
+              <span class="opt__tick"><svg viewBox="0 0 12 12"><path d="M2 6.4 4.6 9 10 3.2"/></svg></span>
+              <span>
+                <span class="opt__t" data-i18n="p1_f1t">Attālināti</span>
+                <span class="opt__d" data-i18n="p1_f1d">Video zvans, saiti saņemat e-pastā</span>
+              </span>
+            </button>
+            <button type="button" class="opt" data-fmt="live" aria-pressed="false">
+              <span class="opt__tick"><svg viewBox="0 0 12 12"><path d="M2 6.4 4.6 9 10 3.2"/></svg></span>
+              <span>
+                <span class="opt__t" data-i18n="p1_f2t">Klātienē</span>
+                <span class="opt__d ph" data-i18n="p1_f2d">Vietu norādām apstiprinājumā</span>
+              </span>
+            </button>
+          </div>
+
+          <div class="field" style="max-width:320px">
+            <label for="svcLang" data-i18n="p1_lang">Sarunas valoda</label>
+            <select id="svcLang">
+              <option value="lv" data-i18n="lang_lv">Latviešu</option>
+              <option value="ru" data-i18n="lang_ru">Krievu</option>
+              <option value="en" data-i18n="lang_en">Angļu</option>
+            </select>
+          </div>
+        </div>
+
+        <!-- ── 2. solis ── -->
+        <div class="panel" data-p="2">
+          <h3 class="panel__h" data-i18n="p2_h">Izvēlieties datumu un laiku</h3>
+          <p class="panel__s" data-i18n="p2_s">Punkts zem datuma nozīmē, ka tajā dienā ir brīvi laiki.</p>
+
+          <div class="calwrap">
+            <div>
+              <div class="calhead">
+                <span class="calhead__m" id="calMonth">—</span>
+                <span class="calnav">
+                  <button type="button" id="calPrev" aria-label="Iepriekšējais mēnesis">
+                    <svg viewBox="0 0 12 12"><path d="M7.5 2 3.5 6l4 4"/></svg>
+                  </button>
+                  <button type="button" id="calNext" aria-label="Nākamais mēnesis">
+                    <svg viewBox="0 0 12 12"><path d="M4.5 2 8.5 6l-4 4"/></svg>
+                  </button>
+                </span>
+              </div>
+              <div class="caldow" id="calDow"></div>
+              <div class="calgrid" id="calGrid"></div>
+              <div class="callegend">
+                <span><i></i><span data-i18n="cal_free">Ir brīvi laiki</span></span>
+                <span><i class="no"></i><span data-i18n="cal_busy">Aizņemts vai nestrādāju</span></span>
+              </div>
+            </div>
+
+            <div>
+              <p class="slots__h" id="slotsHead" data-i18n="p2_slots">Pieejamie laiki</p>
+              <div class="slots__grid" id="slotsGrid"></div>
+              <p class="slots__empty" id="slotsEmpty" data-i18n="p2_pick">Vispirms izvēlieties datumu kalendārā.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- ── 3. solis ── -->
+        <div class="panel" data-p="3">
+          <h3 class="panel__h" data-i18n="p3_h">Jūsu kontaktinformācija</h3>
+          <p class="panel__s" data-i18n="p3_s">Uz šo e-pastu nosūtīsim apstiprinājumu.</p>
+
+          <div class="form">
+            <div class="field">
+              <label for="fName" data-i18n="f_name">Vārds, uzvārds</label>
+              <input id="fName" type="text" autocomplete="name" data-i18n-attr="placeholder:f_name_ph" placeholder="Jūsu vārds" />
+            </div>
+            <div class="field">
+              <label for="fMail" data-i18n="f_mail">E-pasts</label>
+              <input id="fMail" type="email" autocomplete="email" placeholder="jusu@epasts.lv" />
+            </div>
+            <div class="field">
+              <label for="fTel" data-i18n="f_tel">Tālrunis</label>
+              <input id="fTel" type="tel" autocomplete="tel" placeholder="+371 " />
+            </div>
+            <div class="field" id="fOrgWrap">
+              <label for="fOrg" data-i18n="f_org">Organizācija</label>
+              <input id="fOrg" type="text" data-i18n-attr="placeholder:f_org_ph" placeholder="Skola, uzņēmums vai grupa" />
+            </div>
+            <div class="field field--full" id="fCountWrap" style="display:none;max-width:320px">
+              <label for="fCount" data-i18n="f_count">Dalībnieku skaits</label>
+              <input id="fCount" type="number" min="1" placeholder="20" />
+            </div>
+            <div class="field field--full">
+              <label for="fMsg" data-i18n="f_msg">Tēma vai jautājums</label>
+              <textarea id="fMsg" data-i18n-attr="placeholder:f_msg_ph" placeholder="Īsi aprakstiet, par ko vēlaties runāt. Nav obligāti."></textarea>
+            </div>
+            <label class="hp"><input type="checkbox" id="botcheck" tabindex="-1" autocomplete="off" /> Neaizpildīt</label>
+          </div>
+
+          <div class="summary" style="margin-top:1.7rem">
+            <div class="summary__r"><dt data-i18n="s_svc">Pakalpojums</dt><dd id="sumSvc">—</dd></div>
+            <div class="summary__r"><dt data-i18n="s_fmt">Formāts</dt><dd id="sumFmt">—</dd></div>
+            <div class="summary__r big"><dt data-i18n="s_when">Laiks</dt><dd id="sumWhen">—</dd></div>
+            <div class="summary__r"><dt data-i18n="s_lang">Valoda</dt><dd id="sumLang">—</dd></div>
+          </div>
+        </div>
+
+        <!-- ── 4. solis ── -->
+        <div class="panel" data-p="4">
+          <div class="done">
+            <div class="done__ic" id="doneIc">
+              <svg viewBox="0 0 24 24"><path d="M4 12.5 9.5 18 20 6.5"/></svg>
+            </div>
+            <h3 data-i18n="p4_h">Pieteikums nosūtīts</h3>
+            <p data-i18n="p4_s">Apstiprinājumu ar laiku esat saņēmis e-pastā. Ja laiks nederēs, atbildiet uz to pašu vēstuli — pārcelsim.</p>
+            <div class="summary">
+              <div class="summary__r"><dt data-i18n="s_svc">Pakalpojums</dt><dd id="dSvc">—</dd></div>
+              <div class="summary__r big"><dt data-i18n="s_when">Laiks</dt><dd id="dWhen">—</dd></div>
+              <div class="summary__r"><dt data-i18n="s_fmt">Formāts</dt><dd id="dFmt">—</dd></div>
+              <div class="summary__r"><dt data-i18n="s_mail">E-pasts</dt><dd id="dMail">—</dd></div>
+            </div>
+            <p class="demonote" data-i18n="p4_demo">Šis ir melnraksts — īstu vēstuli nekas nenosūtīja.</p>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="book__foot">
+        <p class="book__note" id="bookNote" data-i18n="book_note">Pieteikums neaizņem vairāk par minūti.</p>
+        <div class="book__acts">
+          <button type="button" class="btn btn--line btn--sm" id="bBack" style="display:none" data-i18n="b_back">Atpakaļ</button>
+          <button type="button" class="btn btn--fill btn--sm" id="bNext">
+            <span data-i18n="b_next">Tālāk</span>
+            <svg class="btn__ar" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M2 8h11M9 4l4 4-4 4"/></svg>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════ PAR MANI ═══════════════ -->
+<section class="sec" id="par-mani">
+  <div class="wrap">
+    <div class="split">
+      <div data-rv>
+        <span class="eyebrow" data-i18n="about_eyebrow">Par mani</span>
+        <h2 style="font-size:clamp(1.75rem,3.5vw,2.5rem);margin-bottom:1.05rem" data-i18n="about_h">Veronika Šilo</h2>
+        <p class="sec__lead" data-i18n="about_lead">Strādāju ar pieaugušajiem, vecākiem un jauniešiem. Konsultēju latviešu, krievu un angļu valodā, kā arī vadu seminārus skolām, uzņēmumiem un vecāku grupām.</p>
+      </div>
+
+      <div data-rv>
+        <div class="phbox">
+          <span class="phtag" data-i18n="ph_bio">Šo daļu aizpilda Veronika</span>
+          <p style="font-size:.94rem;color:var(--ink-2);line-height:1.68;margin-bottom:1.1rem" data-i18n="about_ph">Šeit ievietosim izglītību, sertifikātus, pieredzes gadus un pieeju darbam. Nekādus datus par sevi neizdomājam — tos ierakstīsim tieši tā, kā Jūs tos atsūtīsiet.</p>
+          <dl class="deflist" style="border-top-color:var(--line)">
+            <div><dt data-i18n="ab_d1">Izglītība</dt><dd class="ph" data-i18n="ab_v1">Aizpildāms</dd></div>
+            <div><dt data-i18n="ab_d2">Sertifikāti</dt><dd class="ph" data-i18n="ab_v2">Aizpildāms</dd></div>
+            <div><dt data-i18n="ab_d3">Pieredze</dt><dd class="ph" data-i18n="ab_v3">Aizpildāms</dd></div>
+            <div><dt data-i18n="ab_d4">Valodas</dt><dd data-i18n="ab_v4">Latviešu, krievu, angļu</dd></div>
+          </dl>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════ BUJ ═══════════════ -->
+<section class="sec sec--alt" id="buj">
+  <div class="narrow">
+    <div class="sec__head" data-rv>
+      <span class="eyebrow" data-i18n="faq_eyebrow">BUJ</span>
+      <h2 data-i18n="faq_h">Biežāk uzdotie jautājumi</h2>
+    </div>
+
+    <div class="faq" id="faq" data-rv>
+      <div class="faq__i">
+        <button class="faq__q" type="button" data-i18n="q1">Vai konsultācijas notiek arī krieviski un angliski?</button>
+        <div class="faq__a"><p data-i18n="a1">Jā. Valodu izvēlaties pieteikšanās laikā — sarunas notiek latviešu, krievu vai angļu valodā.</p></div>
+      </div>
+      <div class="faq__i">
+        <button class="faq__q" type="button" data-i18n="q2">Vai varu pieteikties uz vienu reizi?</button>
+        <div class="faq__a"><p data-i18n="a2">Jā. Nav jāapņemas uz garu procesu. Pēc pirmās sarunas kopā izlemjam, vai turpināt.</p></div>
+      </div>
+      <div class="faq__i">
+        <button class="faq__q" type="button" data-i18n="q3">Kā notiek attālinātā konsultācija?</button>
+        <div class="faq__a"><p data-i18n="a3">Saiti uz video sarunu saņemat e-pastā pirms tikšanās. Vajadzīgs tikai dators vai telefons un vieta, kur Jūs neviens netraucē.</p></div>
+      </div>
+      <div class="faq__i">
+        <button class="faq__q" type="button" data-i18n="q4">Kā pieteikt semināru organizācijai?</button>
+        <div class="faq__a"><p data-i18n="a4">Pieteikuma formā izvēlieties “Seminārs grupai” un norādiet dalībnieku skaitu un tēmu. Pirms pasākuma sazināšos, lai vienotos par saturu un ilgumu.</p></div>
+      </div>
+      <div class="faq__i">
+        <button class="faq__q" type="button" data-i18n="q5">Vai sarunas ir konfidenciālas?</button>
+        <div class="faq__a"><p data-i18n="a5">Jā. Psihologa darbu regulē konfidencialitātes prasības — sarunas saturs paliek starp mums.</p></div>
+      </div>
+      <div class="faq__i">
+        <button class="faq__q" type="button" data-i18n="q6">Ko darīt, ja izvēlētais laiks vairs neder?</button>
+        <div class="faq__a"><p data-i18n="a6">Atbildiet uz apstiprinājuma vēstuli, un atradīsim citu laiku. Lūdzu, dariet to vismaz dienu iepriekš.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════ KONTAKTI ═══════════════ -->
+<section class="sec" id="kontakti">
+  <div class="wrap">
+    <div class="contact">
+      <div data-rv>
+        <span class="eyebrow" data-i18n="con_eyebrow">Kontakti</span>
+        <h2 style="font-size:clamp(1.75rem,3.5vw,2.5rem);margin-bottom:1.05rem" data-i18n="con_h">Sazināties</h2>
+        <p class="sec__lead" data-i18n="con_lead">Ja vēlaties vispirms parunāt, nevis uzreiz pieteikties — rakstiet. Atbildu darba dienās.</p>
+      </div>
+
+      <div class="cbox" data-rv>
+        <div class="crow">
+          <span class="crow__ic"><svg viewBox="0 0 20 20"><rect x="2" y="4" width="16" height="12" rx="2"/><path d="m3 6 7 5 7-5"/></svg></span>
+          <span class="crow__t">
+            <span data-i18n="con_mail">E-pasts</span>
+            <a href="mailto:veronika.silo@gmail.com">veronika.silo@gmail.com</a>
+          </span>
+        </div>
+        <div class="crow">
+          <span class="crow__ic"><svg viewBox="0 0 20 20"><path d="M5 2.5h3l1.5 4-2 1.5a11 11 0 0 0 4.5 4.5l1.5-2 4 1.5v3a1.5 1.5 0 0 1-1.6 1.5C8.6 16 4 11.4 3.5 4.1A1.5 1.5 0 0 1 5 2.5Z"/></svg></span>
+          <span class="crow__t">
+            <span data-i18n="con_tel">Tālrunis</span>
+            <b class="ph" data-i18n="con_tel_v">Aizpildāms</b>
+          </span>
+        </div>
+        <div class="crow">
+          <span class="crow__ic"><svg viewBox="0 0 20 20"><circle cx="10" cy="10" r="7.5"/><path d="M2.5 10h15M10 2.5a15 15 0 0 1 0 15 15 15 0 0 1 0-15Z"/></svg></span>
+          <span class="crow__t">
+            <span data-i18n="con_langs">Valodas</span>
+            <b data-i18n="con_langs_v">Latviešu · Krievu · Angļu</b>
+          </span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer class="foot">
+  <div class="wrap foot__in">
+    <span>© <span id="yr">2026</span> <span data-i18n="name">Veronika Šilo</span></span>
+    <span data-i18n-html="foot_by">Lapas melnrakstu sagatavojusi <a href="https://www.raststudio.lv" target="_blank" rel="noopener">rast studija</a></span>
+  </div>
+</footer>
+
+<!-- ════════════════════════════════════════════════════════════
+     Animācijas: anime.js v4 · Motion (motion.dev)
+     Viss aizsargāts — ja CDN krīt, lapa paliek pilnībā lasāma
+     un pieteikšanās plūsma joprojām strādā (skat. boot() zemāk).
+     ════════════════════════════════════════════════════════════ -->
+<script type="module">
+let animate, stagger, svg, utils, mAnimate, scroll, inView;
+try {
+  ({ animate, stagger, svg, utils } = await import('https://cdn.jsdelivr.net/npm/animejs@4/+esm'));
+  ({ animate: mAnimate, scroll, inView } = await import('https://cdn.jsdelivr.net/npm/motion@12/+esm'));
+  window.__animReady = true;
+} catch (e) {
+  document.documentElement.classList.add('no-anim');
+}
+const hasAnim = !!window.__animReady;
+const reduced = matchMedia('(prefers-reduced-motion: reduce)').matches;
+const soft = !hasAnim || reduced;
+
+/* ══════════════════════════════════════════════════════════
+   1. VĀRDNĪCA — LV / RU / EN
+   heroEmph = cik pēdējos vārdus virsrakstā slīpināt.
+   ══════════════════════════════════════════════════════════ */
+const I18N = {
+lv: {
+  _locale:'lv-LV', _dir:'ltr',
+  _dow:['Pr','Ot','Tr','Ce','Pk','Se','Sv'],
+  skip:'Pāriet uz saturu',
+  demobar:'Melnraksts — <b>rast studija</b> — nav publicēts',
+  name:'Veronika Šilo', role:'Psiholoģe',
+  nav1:'Konsultācijas', nav2:'Semināri', nav3:'Kā notiek', nav4:'Par mani', nav5:'BUJ', nav6:'Kontakti',
+  cta_book:'Pieteikties',
+
+  hero_eyebrow:'Psiholoģe · konsultācijas un semināri',
+  hero_title:'Strādājam ar konkrētu tēmu, nevis ar visu uzreiz.', heroEmph:4,
+  hero_lead:'Individuālas psihologa konsultācijas un semināri skolām, uzņēmumiem un vecākiem. Klātienē vai attālināti.',
+  hero_cta1:'Pieteikt konsultāciju',
+  hero_cta2:'Semināri organizācijām',
+  hero_langnote:'Konsultācijas un semināri notiek visās trīs valodās',
+  portrait_ph:'Šeit būs<br>Veronikas foto',
+  portrait_tag_t:'Veronika Šilo',
+  portrait_tag_s:'Psiholoģe · LV / RU / EN',
+
+  paths_eyebrow:'Divi virzieni',
+  paths_h:'Divi veidi, kā sākt.',
+  paths_lead:'Viens cilvēks ar savu tēmu vai vesela grupa — skolas kolektīvs, komanda darbā, vecāku sapulce. Darbs abos gadījumos sākas ar vienu jautājumu: kas tieši ir jārisina.',
+  path1_h:'Individuālas konsultācijas',
+  path1_p:'Viens cilvēks, viena tēma, savs temps. Var pieteikties uz vienu reizi — nav jāapņemas uz garu procesu.',
+  path1_go:'Apskatīt tēmas',
+  path2_h:'Semināri un lekcijas',
+  path2_p:'Grupai — skolas kolektīvam, uzņēmuma komandai vai vecākiem. Saturu pielāgoju konkrētajai auditorijai.',
+  path2_go:'Apskatīt programmas',
+
+  ind_eyebrow:'01 · Individuāli',
+  ind_h:'Individuālas konsultācijas',
+  ind_lead:'Konsultācija ir saruna par vienu skaidri nosauktu tēmu. Pirmajā reizē to nosaucam kopā, tālāk strādājam ar to.',
+  ind_d1:'Formāts', ind_v1:'Attālināti (video) vai klātienē',
+  ind_d2:'Ilgums',  ind_v2:'50–60 minūtes',
+  ind_d3:'Valoda',  ind_v3:'Latviešu, krievu vai angļu',
+  ind_d4:'Maksa',   ind_v4:'Norādāma pirms publicēšanas',
+  ph_topics:'Tēmu saraksts — paraugs',
+  ind_topics_note:'Šis ir piemērs, kā tēmas izskatīsies lapā. Gala sarakstu veidojam no Jūsu tēmām — pievienojam, izņemam un pārkārtojam pēc vajadzības.',
+  t1:'Trauksme un spriedze', t2:'Attiecības ģimenē', t3:'Vecāku un bērna attiecības',
+  t4:'Pusaudžu vecumposms', t5:'Pašvērtējums', t6:'Izdegšana darbā',
+  t7:'Zaudējums un sēras', t8:'Grūtības mācībās', t9:'Konflikti kolektīvā', t10:'Pārmaiņas dzīvē',
+  ind_cta:'Izvēlēties laiku',
+
+  sem_eyebrow:'02 · Grupām',
+  sem_h:'Semināri un lekcijas',
+  sem_lead:'Semināru saturu veidoju pēc tā, kas grupā notiek patiesībā. Pirms pasākuma vienojamies par tēmu, dalībnieku skaitu un ilgumu.',
+  aud1_h:'Skolām', aud1_p:'Skolotāju kolektīvam, atbalsta personālam un skolēniem.',
+  aud1_l1:'Saskarsme un konflikti klasē', aud1_l2:'Emociju pašregulācija',
+  aud1_l3:'Pusaudžu vecumposms', aud1_l4:'Skolotāja noturība un slodze',
+  aud2_h:'Uzņēmumiem', aud2_p:'Komandām un vadītājiem — praktiski, ar situācijām no darba ikdienas.',
+  aud2_l1:'Spriedze un izdegšana darbā', aud2_l2:'Sarežģītas sarunas',
+  aud2_l3:'Komunikācija komandā', aud2_l4:'Robežas un slodzes sadale',
+  aud3_h:'Vecākiem', aud3_p:'Vecāku sapulcēm un grupām — bez vainošanas, ar konkrētiem risinājumiem.',
+  aud3_l1:'Robežas un vienošanās mājās', aud3_l2:'Ekrāni un miegs',
+  aud3_l3:'Mācību motivācija', aud3_l4:'Vecāka izdegšana',
+  sem_m1:'Klātienē vai tiešsaistē', sem_m2:'60–120 minūtes',
+  sem_m3:'Latviešu, krievu vai angļu valodā', sem_m4:'Maksa — pēc pieprasījuma',
+  sem_cta:'Pieteikt semināru',
+
+  how_eyebrow:'Pieteikšanās', how_h:'Kā notiek',
+  how_lead:'Bez zvanīšanas un gaidīšanas. Laiku izvēlaties paši, apstiprinājumu saņemat e-pastā.',
+  how1_h:'Izvēlaties', how1_p:'Norādāt, vai vēlaties individuālu konsultāciju vai semināru, un izvēlaties datumu un laiku no brīvajiem.',
+  how2_h:'Saņemat apstiprinājumu', how2_p:'E-pastā atnāk apstiprinājums ar laiku. Attālinātām sarunām — arī saite uz video zvanu.',
+  how3_h:'Tiekamies', how3_p:'Sarunu sākam ar to, kāpēc esat pieteicies. Ja laiks nederēs, to var pārcelt.',
+
+  book_eyebrow:'Tiešsaistes pieteikšanās', book_h:'Izvēlieties laiku',
+  book_lead:'Četri soļi. Apstiprinājumu saņemat e-pastā uzreiz pēc pieteikuma.',
+  bs1:'Pakalpojums', bs2:'Datums un laiks', bs3:'Kontaktinformācija', bs4:'Apstiprinājums',
+  p1_h:'Ko vēlaties pieteikt?', p1_s:'Izvēlieties pakalpojumu un formātu.',
+  p1_o1t:'Individuāla konsultācija', p1_o1d:'Saruna vienatnē par konkrētu tēmu',
+  p1_o2t:'Seminārs grupai', p1_o2d:'Skolai, uzņēmumam vai vecākiem',
+  p1_fmt:'Formāts',
+  p1_f1t:'Attālināti', p1_f1d:'Video zvans, saiti saņemat e-pastā',
+  p1_f2t:'Klātienē',   p1_f2d:'Vietu norādām apstiprinājumā',
+  p1_lang:'Sarunas valoda',
+  lang_lv:'Latviešu', lang_ru:'Krievu', lang_en:'Angļu',
+  p2_h:'Izvēlieties datumu un laiku', p2_s:'Punkts zem datuma nozīmē, ka tajā dienā ir brīvi laiki.',
+  p2_slots:'Pieejamie laiki', p2_pick:'Vispirms izvēlieties datumu kalendārā.',
+  p2_none:'Šajā dienā brīvu laiku nav. Izvēlieties citu datumu.',
+  cal_free:'Ir brīvi laiki', cal_busy:'Aizņemts vai nestrādāju',
+  p3_h:'Jūsu kontaktinformācija', p3_s:'Uz šo e-pastu nosūtīsim apstiprinājumu.',
+  f_name:'Vārds, uzvārds', f_name_ph:'Jūsu vārds',
+  f_mail:'E-pasts', f_tel:'Tālrunis',
+  f_org:'Organizācija', f_org_ph:'Skola, uzņēmums vai grupa',
+  f_count:'Dalībnieku skaits',
+  f_msg:'Tēma vai jautājums', f_msg_ph:'Īsi aprakstiet, par ko vēlaties runāt. Nav obligāti.',
+  s_svc:'Pakalpojums', s_fmt:'Formāts', s_when:'Laiks', s_lang:'Valoda', s_mail:'E-pasts',
+  p4_h:'Pieteikums nosūtīts',
+  p4_s:'Apstiprinājumu ar laiku esat saņēmis e-pastā. Ja laiks nederēs, atbildiet uz to pašu vēstuli — pārcelsim.',
+  p4_demo:'Šis ir melnraksts — īstu vēstuli nekas nenosūtīja.',
+  book_note:'Pieteikums neaizņem vairāk par minūti.',
+  book_note2:'Datus izmantojam tikai pieteikuma apstiprināšanai.',
+  b_back:'Atpakaļ', b_next:'Tālāk', b_send:'Nosūtīt pieteikumu', b_again:'Pieteikt vēlreiz',
+  err_svc:'Izvēlieties pakalpojumu un formātu.',
+  err_slot:'Izvēlieties datumu un laiku.',
+  err_form:'Lūdzu, ievadiet vārdu un derīgu e-pasta adresi.',
+  sending:'Sūta…',
+  svc_ind:'Individuāla konsultācija', svc_sem:'Seminārs grupai',
+  fmt_online:'Attālināti', fmt_live:'Klātienē',
+
+  about_eyebrow:'Par mani', about_h:'Veronika Šilo',
+  about_lead:'Strādāju ar pieaugušajiem, vecākiem un jauniešiem. Konsultēju latviešu, krievu un angļu valodā, kā arī vadu seminārus skolām, uzņēmumiem un vecāku grupām.',
+  ph_bio:'Šo daļu aizpilda Veronika',
+  about_ph:'Šeit ievietosim izglītību, sertifikātus, pieredzes gadus un pieeju darbam. Nekādus datus par sevi neizdomājam — tos ierakstīsim tieši tā, kā Jūs tos atsūtīsiet.',
+  ab_d1:'Izglītība', ab_d2:'Sertifikāti', ab_d3:'Pieredze', ab_d4:'Valodas',
+  ab_v1:'Aizpildāms', ab_v2:'Aizpildāms', ab_v3:'Aizpildāms', ab_v4:'Latviešu, krievu, angļu',
+
+  faq_eyebrow:'BUJ', faq_h:'Biežāk uzdotie jautājumi',
+  q1:'Vai konsultācijas notiek arī krieviski un angliski?',
+  a1:'Jā. Valodu izvēlaties pieteikšanās laikā — sarunas notiek latviešu, krievu vai angļu valodā.',
+  q2:'Vai varu pieteikties uz vienu reizi?',
+  a2:'Jā. Nav jāapņemas uz garu procesu. Pēc pirmās sarunas kopā izlemjam, vai turpināt.',
+  q3:'Kā notiek attālinātā konsultācija?',
+  a3:'Saiti uz video sarunu saņemat e-pastā pirms tikšanās. Vajadzīgs tikai dators vai telefons un vieta, kur Jūs neviens netraucē.',
+  q4:'Kā pieteikt semināru organizācijai?',
+  a4:'Pieteikuma formā izvēlieties “Seminārs grupai” un norādiet dalībnieku skaitu un tēmu. Pirms pasākuma sazināšos, lai vienotos par saturu un ilgumu.',
+  q5:'Vai sarunas ir konfidenciālas?',
+  a5:'Jā. Psihologa darbu regulē konfidencialitātes prasības — sarunas saturs paliek starp mums.',
+  q6:'Ko darīt, ja izvēlētais laiks vairs neder?',
+  a6:'Atbildiet uz apstiprinājuma vēstuli, un atradīsim citu laiku. Lūdzu, dariet to vismaz dienu iepriekš.',
+
+  con_eyebrow:'Kontakti', con_h:'Sazināties',
+  con_lead:'Ja vēlaties vispirms parunāt, nevis uzreiz pieteikties — rakstiet. Atbildu darba dienās.',
+  con_mail:'E-pasts', con_tel:'Tālrunis', con_tel_v:'Aizpildāms',
+  con_langs:'Valodas', con_langs_v:'Latviešu · Krievu · Angļu',
+  foot_by:'Lapas melnrakstu sagatavojusi <a href="https://www.raststudio.lv" target="_blank" rel="noopener">rast studija</a>',
+},
+
+ru: {
+  _locale:'ru-RU', _dir:'ltr',
+  _dow:['Пн','Вт','Ср','Чт','Пт','Сб','Вс'],
+  skip:'Перейти к содержанию',
+  demobar:'Черновик — <b>rast studija</b> — не опубликовано',
+  name:'Вероника Шило', role:'Психолог',
+  nav1:'Консультации', nav2:'Семинары', nav3:'Как это работает', nav4:'Обо мне', nav5:'Вопросы', nav6:'Контакты',
+  cta_book:'Записаться',
+
+  hero_eyebrow:'Психолог · консультации и семинары',
+  hero_title:'Работаем с конкретной темой, а не со всем сразу.', heroEmph:5,
+  hero_lead:'Индивидуальные консультации психолога и семинары для школ, компаний и родителей. Очно или онлайн.',
+  hero_cta1:'Записаться на консультацию',
+  hero_cta2:'Семинары для организаций',
+  hero_langnote:'Консультации и семинары проходят на трёх языках',
+  portrait_ph:'Здесь будет<br>фотография Вероники',
+  portrait_tag_t:'Вероника Шило',
+  portrait_tag_s:'Психолог · LV / RU / EN',
+
+  paths_eyebrow:'Два направления',
+  paths_h:'Два способа начать.',
+  paths_lead:'Один человек со своей темой или целая группа — коллектив школы, команда на работе, родительское собрание. В обоих случаях работа начинается с одного вопроса: что именно нужно решить.',
+  path1_h:'Индивидуальные консультации',
+  path1_p:'Один человек, одна тема, свой темп. Можно записаться на одну встречу — длительный процесс не обязателен.',
+  path1_go:'Посмотреть темы',
+  path2_h:'Семинары и лекции',
+  path2_p:'Для группы — коллектива школы, команды компании или родителей. Содержание подстраиваю под конкретную аудиторию.',
+  path2_go:'Посмотреть программы',
+
+  ind_eyebrow:'01 · Индивидуально',
+  ind_h:'Индивидуальные консультации',
+  ind_lead:'Консультация — это разговор об одной ясно названной теме. На первой встрече называем её вместе, дальше работаем с ней.',
+  ind_d1:'Формат', ind_v1:'Онлайн (видео) или очно',
+  ind_d2:'Длительность', ind_v2:'50–60 минут',
+  ind_d3:'Язык', ind_v3:'Латышский, русский или английский',
+  ind_d4:'Стоимость', ind_v4:'Указать до публикации',
+  ph_topics:'Список тем — образец',
+  ind_topics_note:'Это пример того, как темы будут выглядеть на странице. Итоговый список составим из Ваших тем — что-то добавим, что-то уберём.',
+  t1:'Тревога и напряжение', t2:'Отношения в семье', t3:'Отношения родителя и ребёнка',
+  t4:'Подростковый возраст', t5:'Самооценка', t6:'Выгорание на работе',
+  t7:'Утрата и горе', t8:'Трудности в учёбе', t9:'Конфликты в коллективе', t10:'Перемены в жизни',
+  ind_cta:'Выбрать время',
+
+  sem_eyebrow:'02 · Для групп',
+  sem_h:'Семинары и лекции',
+  sem_lead:'Содержание семинара строю на том, что в группе происходит на самом деле. До встречи договариваемся о теме, числе участников и длительности.',
+  aud1_h:'Школам', aud1_p:'Педагогическому коллективу, службе поддержки и ученикам.',
+  aud1_l1:'Общение и конфликты в классе', aud1_l2:'Саморегуляция эмоций',
+  aud1_l3:'Подростковый возраст', aud1_l4:'Устойчивость и нагрузка учителя',
+  aud2_h:'Компаниям', aud2_p:'Командам и руководителям — практично, на ситуациях из рабочих будней.',
+  aud2_l1:'Напряжение и выгорание на работе', aud2_l2:'Трудные разговоры',
+  aud2_l3:'Общение в команде', aud2_l4:'Границы и распределение нагрузки',
+  aud3_h:'Родителям', aud3_p:'Родительским собраниям и группам — без обвинений, с конкретными решениями.',
+  aud3_l1:'Границы и договорённости дома', aud3_l2:'Экраны и сон',
+  aud3_l3:'Мотивация к учёбе', aud3_l4:'Выгорание родителя',
+  sem_m1:'Очно или онлайн', sem_m2:'60–120 минут',
+  sem_m3:'На латышском, русском или английском', sem_m4:'Стоимость — по запросу',
+  sem_cta:'Заказать семинар',
+
+  how_eyebrow:'Запись', how_h:'Как это работает',
+  how_lead:'Без звонков и ожидания. Время выбираете сами, подтверждение приходит на почту.',
+  how1_h:'Выбираете', how1_p:'Указываете, нужна ли индивидуальная консультация или семинар, и выбираете дату и время из свободных.',
+  how2_h:'Получаете подтверждение', how2_p:'На почту приходит подтверждение со временем. Для онлайн-встреч — ещё и ссылка на видеозвонок.',
+  how3_h:'Встречаемся', how3_p:'Разговор начинаем с того, зачем Вы записались. Если время не подойдёт, его можно перенести.',
+
+  book_eyebrow:'Онлайн-запись', book_h:'Выберите время',
+  book_lead:'Четыре шага. Подтверждение приходит на почту сразу после заявки.',
+  bs1:'Услуга', bs2:'Дата и время', bs3:'Контакты', bs4:'Подтверждение',
+  p1_h:'На что Вы хотите записаться?', p1_s:'Выберите услугу и формат.',
+  p1_o1t:'Индивидуальная консультация', p1_o1d:'Разговор один на один о конкретной теме',
+  p1_o2t:'Семинар для группы', p1_o2d:'Для школы, компании или родителей',
+  p1_fmt:'Формат',
+  p1_f1t:'Онлайн', p1_f1d:'Видеозвонок, ссылку получите на почту',
+  p1_f2t:'Очно',   p1_f2d:'Место укажем в подтверждении',
+  p1_lang:'Язык встречи',
+  lang_lv:'Латышский', lang_ru:'Русский', lang_en:'Английский',
+  p2_h:'Выберите дату и время', p2_s:'Точка под датой означает, что в этот день есть свободное время.',
+  p2_slots:'Свободное время', p2_pick:'Сначала выберите дату в календаре.',
+  p2_none:'В этот день свободного времени нет. Выберите другую дату.',
+  cal_free:'Есть свободное время', cal_busy:'Занято или не работаю',
+  p3_h:'Ваши контакты', p3_s:'На эту почту отправим подтверждение.',
+  f_name:'Имя, фамилия', f_name_ph:'Ваше имя',
+  f_mail:'Эл. почта', f_tel:'Телефон',
+  f_org:'Организация', f_org_ph:'Школа, компания или группа',
+  f_count:'Число участников',
+  f_msg:'Тема или вопрос', f_msg_ph:'Коротко опишите, о чём хотите поговорить. Не обязательно.',
+  s_svc:'Услуга', s_fmt:'Формат', s_when:'Время', s_lang:'Язык', s_mail:'Эл. почта',
+  p4_h:'Заявка отправлена',
+  p4_s:'Подтверждение со временем пришло Вам на почту. Если время не подойдёт, ответьте на это же письмо — перенесём.',
+  p4_demo:'Это черновик — настоящее письмо никто не отправлял.',
+  book_note:'Заявка займёт не больше минуты.',
+  book_note2:'Данные используем только для подтверждения заявки.',
+  b_back:'Назад', b_next:'Далее', b_send:'Отправить заявку', b_again:'Записаться ещё раз',
+  err_svc:'Выберите услугу и формат.',
+  err_slot:'Выберите дату и время.',
+  err_form:'Пожалуйста, введите имя и действующий адрес эл. почты.',
+  sending:'Отправка…',
+  svc_ind:'Индивидуальная консультация', svc_sem:'Семинар для группы',
+  fmt_online:'Онлайн', fmt_live:'Очно',
+
+  about_eyebrow:'Обо мне', about_h:'Вероника Шило',
+  about_lead:'Работаю со взрослыми, родителями и подростками. Консультирую на латышском, русском и английском, а также веду семинары для школ, компаний и родительских групп.',
+  ph_bio:'Эту часть заполняет Вероника',
+  about_ph:'Здесь разместим образование, сертификаты, годы опыта и подход к работе. Ничего о Вас не выдумываем — впишем ровно то, что Вы пришлёте.',
+  ab_d1:'Образование', ab_d2:'Сертификаты', ab_d3:'Опыт', ab_d4:'Языки',
+  ab_v1:'Заполняется', ab_v2:'Заполняется', ab_v3:'Заполняется', ab_v4:'Латышский, русский, английский',
+
+  faq_eyebrow:'Вопросы', faq_h:'Частые вопросы',
+  q1:'Проходят ли консультации на русском и английском?',
+  a1:'Да. Язык выбираете при записи — встречи проходят на латышском, русском или английском.',
+  q2:'Можно записаться на один раз?',
+  a2:'Да. Длительный процесс не обязателен. После первой встречи вместе решаем, продолжать ли.',
+  q3:'Как проходит онлайн-консультация?',
+  a3:'Ссылку на видеовстречу получаете на почту заранее. Нужен только компьютер или телефон и место, где Вас никто не потревожит.',
+  q4:'Как заказать семинар для организации?',
+  a4:'В форме заявки выберите «Семинар для группы» и укажите число участников и тему. До встречи свяжусь, чтобы договориться о содержании и длительности.',
+  q5:'Конфиденциальны ли встречи?',
+  a5:'Да. Работу психолога регулируют требования конфиденциальности — содержание разговора остаётся между нами.',
+  q6:'Что делать, если выбранное время больше не подходит?',
+  a6:'Ответьте на письмо с подтверждением, и найдём другое время. Пожалуйста, сделайте это хотя бы за день.',
+
+  con_eyebrow:'Контакты', con_h:'Связаться',
+  con_lead:'Если сначала хотите поговорить, а не сразу записываться — напишите. Отвечаю в рабочие дни.',
+  con_mail:'Эл. почта', con_tel:'Телефон', con_tel_v:'Заполняется',
+  con_langs:'Языки', con_langs_v:'Латышский · Русский · Английский',
+  foot_by:'Черновик страницы подготовила <a href="https://www.raststudio.lv" target="_blank" rel="noopener">rast studija</a>',
+},
+
+en: {
+  _locale:'en-GB', _dir:'ltr',
+  _dow:['Mon','Tue','Wed','Thu','Fri','Sat','Sun'],
+  skip:'Skip to content',
+  demobar:'Draft — <b>rast studija</b> — not published',
+  name:'Veronika Šilo', role:'Psychologist',
+  nav1:'Consultations', nav2:'Seminars', nav3:'How it works', nav4:'About', nav5:'FAQ', nav6:'Contact',
+  cta_book:'Book',
+
+  hero_eyebrow:'Psychologist · consultations and seminars',
+  hero_title:'We work on one specific topic, not on everything at once.', heroEmph:5,
+  hero_lead:'Individual psychological consultations and seminars for schools, companies and parents. In person or online.',
+  hero_cta1:'Book a consultation',
+  hero_cta2:'Seminars for organisations',
+  hero_langnote:'Consultations and seminars run in all three languages',
+  portrait_ph:'Veronika’s photo<br>goes here',
+  portrait_tag_t:'Veronika Šilo',
+  portrait_tag_s:'Psychologist · LV / RU / EN',
+
+  paths_eyebrow:'Two directions',
+  paths_h:'Two ways to start.',
+  paths_lead:'One person with their own topic, or a whole group — a school staff room, a work team, a parents’ meeting. Either way the work starts with one question: what exactly needs solving.',
+  path1_h:'Individual consultations',
+  path1_p:'One person, one topic, your own pace. A single session is fine — no long commitment needed.',
+  path1_go:'See the topics',
+  path2_h:'Seminars and talks',
+  path2_p:'For a group — school staff, a company team or parents. I adapt the content to the specific audience.',
+  path2_go:'See the programmes',
+
+  ind_eyebrow:'01 · Individual',
+  ind_h:'Individual consultations',
+  ind_lead:'A consultation is a conversation about one clearly named topic. In the first session we name it together, then we work on it.',
+  ind_d1:'Format', ind_v1:'Online (video) or in person',
+  ind_d2:'Length', ind_v2:'50–60 minutes',
+  ind_d3:'Language', ind_v3:'Latvian, Russian or English',
+  ind_d4:'Fee', ind_v4:'To be set before publishing',
+  ph_topics:'Topic list — sample',
+  ind_topics_note:'This is an example of how topics will look on the page. The final list will be built from your topics — we add, remove and reorder as needed.',
+  t1:'Anxiety and tension', t2:'Family relationships', t3:'Parent and child relationships',
+  t4:'Adolescence', t5:'Self-esteem', t6:'Burnout at work',
+  t7:'Loss and grief', t8:'Difficulties with studies', t9:'Conflict in a team', t10:'Life changes',
+  ind_cta:'Choose a time',
+
+  sem_eyebrow:'02 · For groups',
+  sem_h:'Seminars and talks',
+  sem_lead:'I build seminar content around what is actually happening in the group. Before the event we agree on the topic, the number of participants and the length.',
+  aud1_h:'For schools', aud1_p:'For teaching staff, support staff and pupils.',
+  aud1_l1:'Communication and conflict in class', aud1_l2:'Emotional self-regulation',
+  aud1_l3:'Adolescence', aud1_l4:'Teacher resilience and workload',
+  aud2_h:'For companies', aud2_p:'For teams and managers — practical, built on everyday work situations.',
+  aud2_l1:'Stress and burnout at work', aud2_l2:'Difficult conversations',
+  aud2_l3:'Communication in a team', aud2_l4:'Boundaries and workload',
+  aud3_h:'For parents', aud3_p:'For parents’ meetings and groups — no blame, concrete solutions.',
+  aud3_l1:'Boundaries and agreements at home', aud3_l2:'Screens and sleep',
+  aud3_l3:'Motivation to study', aud3_l4:'Parental burnout',
+  sem_m1:'In person or online', sem_m2:'60–120 minutes',
+  sem_m3:'In Latvian, Russian or English', sem_m4:'Fee on request',
+  sem_cta:'Request a seminar',
+
+  how_eyebrow:'Booking', how_h:'How it works',
+  how_lead:'No phone calls, no waiting. You pick the time, the confirmation arrives by email.',
+  how1_h:'You choose', how1_p:'You say whether you want an individual consultation or a seminar, then pick a date and time from the free slots.',
+  how2_h:'You get a confirmation', how2_p:'A confirmation with the time arrives by email. For online sessions, the video link comes with it.',
+  how3_h:'We meet', how3_p:'We start with why you booked. If the time stops working, it can be moved.',
+
+  book_eyebrow:'Online booking', book_h:'Choose a time',
+  book_lead:'Four steps. The confirmation arrives by email right after you send the request.',
+  bs1:'Service', bs2:'Date and time', bs3:'Contact details', bs4:'Confirmation',
+  p1_h:'What would you like to book?', p1_s:'Choose the service and the format.',
+  p1_o1t:'Individual consultation', p1_o1d:'A one-to-one conversation on a specific topic',
+  p1_o2t:'Seminar for a group', p1_o2d:'For a school, a company or parents',
+  p1_fmt:'Format',
+  p1_f1t:'Online', p1_f1d:'Video call, the link arrives by email',
+  p1_f2t:'In person', p1_f2d:'The location is given in the confirmation',
+  p1_lang:'Language of the session',
+  lang_lv:'Latvian', lang_ru:'Russian', lang_en:'English',
+  p2_h:'Choose a date and time', p2_s:'A dot under a date means there are free slots that day.',
+  p2_slots:'Available times', p2_pick:'Pick a date in the calendar first.',
+  p2_none:'No free slots that day. Please choose another date.',
+  cal_free:'Free slots', cal_busy:'Busy or not working',
+  p3_h:'Your contact details', p3_s:'We will send the confirmation to this address.',
+  f_name:'Full name', f_name_ph:'Your name',
+  f_mail:'Email', f_tel:'Phone',
+  f_org:'Organisation', f_org_ph:'School, company or group',
+  f_count:'Number of participants',
+  f_msg:'Topic or question', f_msg_ph:'Briefly describe what you want to talk about. Optional.',
+  s_svc:'Service', s_fmt:'Format', s_when:'Time', s_lang:'Language', s_mail:'Email',
+  p4_h:'Request sent',
+  p4_s:'A confirmation with the time has arrived in your inbox. If the time stops working, reply to that email and we will move it.',
+  p4_demo:'This is a draft — no real email was sent.',
+  book_note:'The request takes less than a minute.',
+  book_note2:'We use your details only to confirm the booking.',
+  b_back:'Back', b_next:'Next', b_send:'Send request', b_again:'Book again',
+  err_svc:'Please choose a service and a format.',
+  err_slot:'Please choose a date and a time.',
+  err_form:'Please enter your name and a valid email address.',
+  sending:'Sending…',
+  svc_ind:'Individual consultation', svc_sem:'Seminar for a group',
+  fmt_online:'Online', fmt_live:'In person',
+
+  about_eyebrow:'About', about_h:'Veronika Šilo',
+  about_lead:'I work with adults, parents and young people. I consult in Latvian, Russian and English, and run seminars for schools, companies and parent groups.',
+  ph_bio:'Veronika fills in this part',
+  about_ph:'Education, certificates, years of experience and approach to the work go here. We invent nothing about you — we write exactly what you send us.',
+  ab_d1:'Education', ab_d2:'Certificates', ab_d3:'Experience', ab_d4:'Languages',
+  ab_v1:'To be filled in', ab_v2:'To be filled in', ab_v3:'To be filled in', ab_v4:'Latvian, Russian, English',
+
+  faq_eyebrow:'FAQ', faq_h:'Frequently asked questions',
+  q1:'Do consultations also run in Russian and English?',
+  a1:'Yes. You choose the language when booking — sessions run in Latvian, Russian or English.',
+  q2:'Can I book just one session?',
+  a2:'Yes. There is no commitment to a long process. After the first session we decide together whether to continue.',
+  q3:'How does an online consultation work?',
+  a3:'You get the video link by email before we meet. All you need is a computer or a phone and a place where nobody will interrupt you.',
+  q4:'How do I request a seminar for my organisation?',
+  a4:'In the booking form choose “Seminar for a group” and give the number of participants and the topic. I will get in touch before the event to agree on content and length.',
+  q5:'Are the sessions confidential?',
+  a5:'Yes. A psychologist’s work is bound by confidentiality — what is said stays between us.',
+  q6:'What if the time I chose no longer works?',
+  a6:'Reply to the confirmation email and we will find another time. Please do it at least a day in advance.',
+
+  con_eyebrow:'Contact', con_h:'Get in touch',
+  con_lead:'If you would rather talk first than book straight away, write to me. I reply on working days.',
+  con_mail:'Email', con_tel:'Phone', con_tel_v:'To be filled in',
+  con_langs:'Languages', con_langs_v:'Latvian · Russian · English',
+  foot_by:'Draft prepared by <a href="https://www.raststudio.lv" target="_blank" rel="noopener">rast studija</a>',
+},
+};
+
+let LANG = (localStorage.getItem('vs-lang') || 'lv');
+if (!I18N[LANG]) LANG = 'lv';
+const T = (k) => (I18N[LANG][k] ?? I18N.lv[k] ?? k);
+
+/* ══════════════════════════════════════════════════════════
+   2. HERO VIRSRAKSTS — dalīšana vārdos
+   ══════════════════════════════════════════════════════════ */
+const heroEl = document.getElementById('heroTitle');
+
+function renderHero(anim) {
+  const text = T('hero_title');
+  const emph = I18N[LANG].heroEmph || 0;
+  const words = text.trim().split(/\s+/);
+  const first = words.length - emph;
+  heroEl.innerHTML = '';
+  const inners = words.map((w, i) => {
+    const mask = document.createElement('span');
+    mask.style.cssText = 'display:inline-block;overflow:hidden;vertical-align:top;padding-bottom:.1em';
+    const inner = document.createElement('span');
+    inner.textContent = w;
+    inner.style.display = 'inline-block';
+    if (i >= first) inner.className = 'em';
+    mask.appendChild(inner);
+    heroEl.appendChild(mask);
+    if (i < words.length - 1) heroEl.appendChild(document.createTextNode(' '));
+    return inner;
+  });
+  if (soft || !anim) return;
+  utils.set(inners, { y: '112%', opacity: 0 });
+  animate(inners, {
+    y: ['112%', '0%'], opacity: [0, 1], duration: 1050,
+    delay: stagger(52, { start: 180 }), ease: 'out(3)',
+  });
+}
+
+/* ══════════════════════════════════════════════════════════
+   3. VALODAS PĀRSLĒGŠANA
+   ══════════════════════════════════════════════════════════ */
+function applyLang(anim) {
+  const d = I18N[LANG];
+  document.documentElement.lang = LANG;
+
+  document.querySelectorAll('[data-i18n]').forEach((el) => {
+    const v = T(el.dataset.i18n);
+    if (v != null) el.textContent = v;
+  });
+  document.querySelectorAll('[data-i18n-html]').forEach((el) => {
+    const v = T(el.dataset.i18nHtml);
+    if (v != null) el.innerHTML = v;
+  });
+  document.querySelectorAll('[data-i18n-attr]').forEach((el) => {
+    el.dataset.i18nAttr.split(';').forEach((pair) => {
+      const [attr, key] = pair.split(':');
+      const v = T(key.trim());
+      if (v != null) el.setAttribute(attr.trim(), v);
+    });
+  });
+
+  renderHero(anim);
+  movePill();
+  buildDow();
+  renderCal();
+  renderSlots();
+  refreshSummary();
+  updateFoot();
+  document.querySelectorAll('#lang button').forEach((b) => {
+    b.setAttribute('aria-pressed', String(b.dataset.lang === LANG));
+  });
+  document.documentElement.dir = d._dir;
+}
+
+const langBox = document.getElementById('lang');
+const langPill = document.getElementById('langPill');
+function movePill() {
+  const btn = langBox.querySelector(`button[data-lang="${LANG}"]`);
+  if (!btn) return;
+  langPill.style.width = btn.offsetWidth + 'px';
+  langPill.style.transform = `translateX(${btn.offsetLeft - 3}px)`;
+}
+langBox.addEventListener('click', (e) => {
+  const b = e.target.closest('button[data-lang]');
+  if (!b || b.dataset.lang === LANG) return;
+  LANG = b.dataset.lang;
+  localStorage.setItem('vs-lang', LANG);
+  applyLang(true);
+});
+
+/* ══════════════════════════════════════════════════════════
+   3b. IZVĒLNE MAZĀKOS EKRĀNOS
+   ══════════════════════════════════════════════════════════ */
+const menuBtn = document.getElementById('menuBtn');
+const mobmenu = document.getElementById('mobmenu');
+const closeMenu = () => {
+  mobmenu.classList.remove('open');
+  menuBtn.setAttribute('aria-expanded', 'false');
+};
+menuBtn.addEventListener('click', () => {
+  const open = mobmenu.classList.toggle('open');
+  menuBtn.setAttribute('aria-expanded', String(open));
+});
+mobmenu.addEventListener('click', (e) => { if (e.target.closest('a')) closeMenu(); });
+document.addEventListener('keydown', (e) => {
+  if (e.key === 'Escape' && mobmenu.classList.contains('open')) { closeMenu(); menuBtn.focus(); }
+});
+addEventListener('resize', () => { if (innerWidth > 1000) closeMenu(); });
+
+/* ══════════════════════════════════════════════════════════
+   4. PIETEIKŠANĀS PLŪSMA (tikai priekšpuse — bez servera)
+   ══════════════════════════════════════════════════════════ */
+const state = { step: 1, svc: null, fmt: null, lang: 'lv', date: null, slot: null };
+
+const bbody   = document.getElementById('bbody');
+const bBack   = document.getElementById('bBack');
+const bNext   = document.getElementById('bNext');
+const bNextLb = bNext.querySelector('span');
+const bookNote= document.getElementById('bookNote');
+const bsteps  = document.getElementById('bsteps');
+
+/* ── 4.1 pakalpojuma un formāta izvēle ─────────────────── */
+document.querySelectorAll('[data-svc]').forEach((b) => {
+  b.addEventListener('click', () => {
+    state.svc = b.dataset.svc;
+    document.querySelectorAll('[data-svc]').forEach((x) =>
+      x.setAttribute('aria-pressed', String(x === b)));
+    // semināram vajag dalībnieku skaitu, individuālajam nē
+    document.getElementById('fCountWrap').style.display = state.svc === 'sem' ? '' : 'none';
+    refreshSummary();
+  });
+});
+document.querySelectorAll('[data-fmt]').forEach((b) => {
+  b.addEventListener('click', () => {
+    state.fmt = b.dataset.fmt;
+    document.querySelectorAll('[data-fmt]').forEach((x) =>
+      x.setAttribute('aria-pressed', String(x === b)));
+    refreshSummary();
+  });
+});
+document.getElementById('svcLang').addEventListener('change', (e) => {
+  state.lang = e.target.value;
+  refreshSummary();
+});
+
+// CTA pogas lapā aizpilda 1. soli un aizritina līdz pieteikumam
+document.querySelectorAll('[data-book-preset]').forEach((a) => {
+  a.addEventListener('click', () => {
+    const p = a.dataset.bookPreset;
+    const btn = document.querySelector(`[data-svc="${p}"]`);
+    if (btn && state.svc !== p) btn.click();
+  });
+});
+
+/* ── 4.2 kalendārs ─────────────────────────────────────── */
+const calMonth = document.getElementById('calMonth');
+const calGrid  = document.getElementById('calGrid');
+const calDow   = document.getElementById('calDow');
+const calPrev  = document.getElementById('calPrev');
+const calNext  = document.getElementById('calNext');
+
+const today = new Date(); today.setHours(0, 0, 0, 0);
+let view = new Date(today.getFullYear(), today.getMonth(), 1);
+const maxView = new Date(today.getFullYear(), today.getMonth() + 2, 1);
+
+const key = (d) => `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, '0')}-${String(d.getDate()).padStart(2, '0')}`;
+
+/* Determinēts "pieejamības" ģenerators — vienam un tam pašam datumam
+   vienmēr dod to pašu rezultātu, tāpēc demo neizskatās nejaušs. */
+function seed(str) {
+  let h = 2166136261;
+  for (let i = 0; i < str.length; i++) { h ^= str.charCodeAt(i); h = Math.imul(h, 16777619); }
+  return ((h >>> 0) % 1000) / 1000;
+}
+const WORK_HOURS = ['09:00', '10:00', '11:00', '12:00', '14:00', '15:00', '16:00', '17:00'];
+
+function daySlots(d) {
+  const dow = d.getDay();                      // 0 = svētdiena
+  if (dow === 0 || dow === 6) return [];       // brīvdienās nestrādā
+  if (d < today) return [];
+  const k = key(d);
+  const s = seed(k);
+  if (s < 0.16) return [];                     // pilnībā aizņemta diena
+  return WORK_HOURS.filter((h, i) => seed(k + h) > (0.22 + (i % 3) * 0.08));
+}
+
+/* Nedēļas dienu saīsinājumus rakstām paši. Intl lv-LV "short" dod
+   "pirmd./piektd.", un pirmie divi burti abiem ir "pi" — kalendārā
+   pirmdiena un piektdiena izskatītos vienādi. */
+function buildDow() {
+  calDow.innerHTML = '';
+  I18N[LANG]._dow.forEach((lb) => {
+    const s = document.createElement('span');
+    s.textContent = lb;
+    calDow.appendChild(s);
+  });
+}
+
+function renderCal() {
+  const loc = I18N[LANG]._locale;
+  // "Augusts 2026", nevis Intl "2026. g. augusts" ar sabojātiem lielajiem burtiem
+  const mn = new Intl.DateTimeFormat(loc, { month: 'long' }).format(view);
+  calMonth.textContent = mn.charAt(0).toUpperCase() + mn.slice(1) + ' ' + view.getFullYear();
+  calPrev.disabled = view <= new Date(today.getFullYear(), today.getMonth(), 1);
+  calNext.disabled = view >= maxView;
+
+  const y = view.getFullYear(), m = view.getMonth();
+  const first = new Date(y, m, 1);
+  const lead = (first.getDay() + 6) % 7;              // pirmdiena = 0
+  const days = new Date(y, m + 1, 0).getDate();
+
+  calGrid.innerHTML = '';
+  for (let i = 0; i < lead; i++) {
+    const b = document.createElement('span');
+    b.className = 'cday empty';
+    calGrid.appendChild(b);
+  }
+  for (let dn = 1; dn <= days; dn++) {
+    const d = new Date(y, m, dn);
+    const slots = daySlots(d);
+    const b = document.createElement('button');
+    b.type = 'button';
+    b.className = 'cday' + (slots.length ? ' free' : '');
+    b.textContent = dn;
+    b.disabled = !slots.length;
+    b.dataset.k = key(d);
+    if (state.date === key(d)) b.classList.add('sel');
+    b.addEventListener('click', () => {
+      state.date = key(d);
+      state.slot = null;
+      calGrid.querySelectorAll('.cday').forEach((x) => x.classList.toggle('sel', x === b));
+      renderSlots(true);
+      refreshSummary();
+    });
+    calGrid.appendChild(b);
+  }
+  if (!soft) {
+    mAnimate(calGrid.querySelectorAll('.cday:not(.empty)'),
+      { opacity: [0, 1], scale: [.9, 1] },
+      { duration: .34, delay: (i) => Math.min(i, 24) * .012, ease: [.22, .85, .28, 1] });
+  }
+}
+
+calPrev.addEventListener('click', () => { view = new Date(view.getFullYear(), view.getMonth() - 1, 1); renderCal(); });
+calNext.addEventListener('click', () => { view = new Date(view.getFullYear(), view.getMonth() + 1, 1); renderCal(); });
+
+const slotsGrid  = document.getElementById('slotsGrid');
+const slotsEmpty = document.getElementById('slotsEmpty');
+
+function renderSlots(anim) {
+  slotsGrid.innerHTML = '';
+  if (!state.date) {
+    slotsEmpty.style.display = '';
+    slotsEmpty.textContent = T('p2_pick');
+    return;
+  }
+  const [Y, M, D] = state.date.split('-').map(Number);
+  const slots = daySlots(new Date(Y, M - 1, D));
+  if (!slots.length) {
+    slotsEmpty.style.display = '';
+    slotsEmpty.textContent = T('p2_none');
+    return;
+  }
+  slotsEmpty.style.display = 'none';
+  // dažus rādām aizņemtus, lai kalendārs izskatās dzīvs
+  const shown = WORK_HOURS.map((h) => ({ h, free: slots.includes(h) }));
+  shown.forEach(({ h, free }) => {
+    const b = document.createElement('button');
+    b.type = 'button';
+    b.className = 'slot';
+    b.textContent = h;
+    b.disabled = !free;
+    b.setAttribute('aria-pressed', String(state.slot === h));
+    b.addEventListener('click', () => {
+      state.slot = h;
+      slotsGrid.querySelectorAll('.slot').forEach((x) =>
+        x.setAttribute('aria-pressed', String(x === b)));
+      refreshSummary();
+    });
+    slotsGrid.appendChild(b);
+  });
+  if (anim && !soft) {
+    mAnimate(slotsGrid.querySelectorAll('.slot'),
+      { opacity: [0, 1], y: [10, 0] },
+      { duration: .38, delay: (i) => i * .028, ease: [.22, .85, .28, 1] });
+  }
+}
+
+/* ── 4.3 kopsavilkums ──────────────────────────────────── */
+function whenText() {
+  if (!state.date || !state.slot) return '—';
+  const [Y, M, D] = state.date.split('-').map(Number);
+  const d = new Date(Y, M - 1, D);
+  const loc = I18N[LANG]._locale;
+  const s = new Intl.DateTimeFormat(loc, { weekday: 'long', day: 'numeric', month: 'long' }).format(d);
+  return `${s}, ${state.slot}`;
+}
+function refreshSummary() {
+  const svc = state.svc ? T(state.svc === 'ind' ? 'svc_ind' : 'svc_sem') : '—';
+  const fmt = state.fmt ? T(state.fmt === 'online' ? 'fmt_online' : 'fmt_live') : '—';
+  const lng = T('lang_' + state.lang);
+  document.getElementById('sumSvc').textContent  = svc;
+  document.getElementById('sumFmt').textContent  = fmt;
+  document.getElementById('sumWhen').textContent = whenText();
+  document.getElementById('sumLang').textContent = lng;
+  document.getElementById('dSvc').textContent    = svc;
+  document.getElementById('dFmt').textContent    = fmt;
+  document.getElementById('dWhen').textContent   = whenText();
+}
+
+/* ── 4.4 soļu pārslēgšana ──────────────────────────────── */
+function showStep(n, dir) {
+  const from = bbody.querySelector('.panel.on');
+  const to   = bbody.querySelector(`.panel[data-p="${n}"]`);
+  if (!to) return;
+  state.step = n;
+
+  // Maiņa notiek uzreiz, animējam tikai ienākošo paneli. Agrāk šeit bija
+  // .finished.then(swap) — bet rAF apstājas, kad cilne aiziet fonā, un tad
+  // solis paliktu iesprūdis. Tagad plūsma strādā arī bez animācijas.
+  if (from && from !== to) from.classList.remove('on');
+  to.classList.add('on');
+  if (!soft && from !== to) {
+    mAnimate(to, { opacity: [0, 1], x: [dir > 0 ? 22 : -22, 0] },
+      { duration: .42, ease: [.22, .85, .28, 1] });
+  }
+
+  bsteps.querySelectorAll('.bstep').forEach((s) => {
+    const i = +s.dataset.s;
+    s.classList.toggle('on', i === n);
+    s.classList.toggle('done', i < n);
+  });
+  updateFoot();
+  if (n === 2) { renderCal(); renderSlots(); }
+}
+
+function updateFoot() {
+  bBack.style.display = state.step > 1 && state.step < 4 ? '' : 'none';
+  bNextLb.textContent =
+    state.step === 3 ? T('b_send') :
+    state.step === 4 ? T('b_again') : T('b_next');
+  bookNote.textContent = state.step === 3 ? T('book_note2') : T('book_note');
+  bNext.querySelector('.btn__ar').style.display = state.step === 4 ? 'none' : '';
+}
+
+function flash(msg) {
+  bookNote.textContent = msg;
+  bookNote.style.color = 'var(--clay-deep)';
+  if (!soft) mAnimate(bookNote, { x: [0, -5, 5, -3, 0] }, { duration: .32 });
+  setTimeout(() => { bookNote.style.color = ''; updateFoot(); }, 2600);
+}
+
+bBack.addEventListener('click', () => showStep(Math.max(1, state.step - 1), -1));
+
+bNext.addEventListener('click', () => {
+  if (state.step === 1) {
+    if (!state.svc || !state.fmt) return flash(T('err_svc'));
+    return showStep(2, 1);
+  }
+  if (state.step === 2) {
+    if (!state.date || !state.slot) return flash(T('err_slot'));
+    return showStep(3, 1);
+  }
+  if (state.step === 3) {
+    const name = document.getElementById('fName').value.trim();
+    const mail = document.getElementById('fMail').value.trim();
+    const bot  = document.getElementById('botcheck').checked;
+    if (bot) return;                                   // slazds robotiem
+    if (name.length < 2 || !/^\S+@\S+\.\S{2,}$/.test(mail)) return flash(T('err_form'));
+    document.getElementById('dMail').textContent = mail;
+    bNextLb.textContent = T('sending');
+    // Melnrakstā nekas netiek sūtīts — imitējam tīkla aizkavi.
+    setTimeout(() => {
+      showStep(4, 1);
+      if (!soft) {
+        mAnimate(document.getElementById('doneIc'),
+          { scale: [.5, 1.12, 1] }, { duration: .62, ease: [.3, 1.4, .5, 1] });
+      }
+    }, 700);
+    return;
+  }
+  // 4. solis — sākam no jauna
+  state.svc = null; state.fmt = null; state.date = null; state.slot = null;
+  document.querySelectorAll('[data-svc],[data-fmt]').forEach((x) => x.setAttribute('aria-pressed', 'false'));
+  document.querySelectorAll('#fName,#fMail,#fTel,#fOrg,#fMsg,#fCount').forEach((x) => (x.value = ''));
+  refreshSummary();
+  showStep(1, -1);
+});
+
+/* ══════════════════════════════════════════════════════════
+   5. BUJ akordeons
+   ══════════════════════════════════════════════════════════ */
+document.querySelectorAll('.faq__i').forEach((item) => {
+  const q = item.querySelector('.faq__q');
+  const a = item.querySelector('.faq__a');
+  q.setAttribute('aria-expanded', 'false');
+  q.addEventListener('click', () => {
+    const open = item.classList.toggle('open');
+    q.setAttribute('aria-expanded', String(open));
+    const h = a.scrollHeight;
+    if (soft) { a.style.height = open ? 'auto' : '0px'; return; }
+    mAnimate(a, { height: open ? [a.offsetHeight + 'px', h + 'px'] : [a.offsetHeight + 'px', '0px'] },
+      { duration: .42, ease: [.22, .85, .28, 1] });
+    // Augstumu fiksējam ar taimeri, nevis ar .finished — tas neizpildās,
+    // ja cilne ir fonā, un atvērtā atbilde paliktu ar iesaldētu augstumu.
+    setTimeout(() => { a.style.height = open ? 'auto' : '0px'; }, 440);
+  });
+});
+
+/* ══════════════════════════════════════════════════════════
+   6. ATKLĀŠANĀS UN PARAKSTA KUSTĪBA
+   ══════════════════════════════════════════════════════════ */
+document.getElementById('yr').textContent = new Date().getFullYear();
+
+const nav = document.getElementById('nav');
+const onScrollNav = () => nav.classList.toggle('scrolled', scrollY > 24);
+onScrollNav();
+addEventListener('scroll', onScrollNav, { passive: true });
+addEventListener('resize', movePill);
+
+if (hasAnim) {
+  /* lasīšanas progress */
+  scroll(mAnimate('#progress', { scaleX: [0, 1] }, { ease: 'linear' }));
+
+  /* uzraksts virs virsraksta "nosēžas" */
+  if (!reduced) {
+    animate(document.getElementById('eyebrow'), {
+      opacity: [0, 1], letterSpacing: ['.4em', '.24em'],
+      duration: 1300, delay: 110, ease: 'out(4)',
+    });
+  }
+
+  /* logotipa līnijas zīmējas — createDrawable uzliek stroke-dasharray,
+     tāpēc pie prefers-reduced-motion to nesaucam vispār */
+  if (!reduced) {
+    animate(svg.createDrawable('.mark-path'), {
+      draw: ['0 0', '0 1'], duration: 1500, delay: stagger(180), ease: 'inOut(2)',
+    });
+  }
+
+  /* sekciju atklāšana */
+  document.querySelectorAll('[data-rv]').forEach((el) => {
+    if (reduced) { el.style.opacity = 1; return; }
+    el.style.opacity = 0;
+    inView(el, () => {
+      mAnimate(el, { opacity: [0, 1], y: [26, 0], filter: ['blur(6px)', 'blur(0px)'] },
+        { duration: .9, ease: [.22, .85, .28, 1] });
+    }, { amount: .14, margin: '0px 0px -8% 0px' });
+  });
+
+  /* portreta paralakse */
+  if (!reduced) {
+    scroll(mAnimate('#portraitImg', { y: [-14, 22] }, { ease: 'linear' }),
+      { target: document.getElementById('portraitFrame'), offset: ['start end', 'end start'] });
+  }
+
+  /* tēmu čipu kaskāde */
+  const chipBox = document.getElementById('topicChips');
+  if (!reduced) {
+    inView(chipBox, () => {
+      mAnimate(chipBox.querySelectorAll('.chip'),
+        { opacity: [0, 1], y: [12, 0], scale: [.96, 1] },
+        { duration: .5, delay: (i) => i * .035, ease: [.22, .85, .28, 1] });
+    }, { amount: .3 });
+  }
+}
+
+/* ══════════════════════════════════════════════════════════
+   7. STARTS
+   ══════════════════════════════════════════════════════════ */
+document.getElementById('svcLang').value = LANG;
+state.lang = LANG;
+applyLang(true);
+showStep(1, 1);
+</script>
+</body>
+</html>
