@@ -497,6 +497,30 @@ section{position:relative}
 .slot[aria-pressed="true"]{background:var(--ink);border-color:var(--ink);color:var(--paper)}
 .slots__empty{color:var(--faint);font-size:.9rem;padding:1.4rem 0;line-height:1.6}
 
+/* ── brīvo laiku sadaļa ───────────────────────────────────── */
+/* Tā pati kalendāra valoda, kas pieteikumā, tikai atklātā kartē.
+   Fons paliek tas pats, tāpēc sadaļu atdala tikai matiņlīnija. */
+.avail{border-top:1px solid var(--line);scroll-margin-top:calc(var(--bar) + 62px + 14px)}
+.availcard{
+  border:1px solid var(--line);border-radius:calc(var(--r) * 3);background:var(--paper);
+  padding:2.1rem 1.9rem;box-shadow:0 24px 64px -52px rgba(23,33,29,.45);
+}
+@media (max-width:560px){ .availcard{padding:1.5rem 1.15rem} }
+/* Pilnā lapas platumā kvadrātveida dienas izstieptos pārāk augstas,
+   tāpēc kalendāram te ir savs griests, nevis daļa no brīvās vietas. */
+.availcard .calwrap{grid-template-columns:minmax(0,420px) minmax(0,1fr);gap:3.2rem}
+@media (max-width:760px){ .availcard .calwrap{grid-template-columns:minmax(0,1fr)} }
+.availcard .avail__note{max-width:440px}
+/* Griestus laiku režģim liekam tikai platajos ekrānos. Šaurā ekrānā
+   max-width kopā ar auto-fill uzspiestu četras kolonnas un izstumtu
+   kalendāru ārpus lapas. */
+@media (min-width:761px){ .availcard .slots__grid{max-width:440px} }
+.avail__day{
+  font-family:'Lora',serif;font-size:1.06rem;font-weight:500;color:var(--ink);
+  margin:0 0 1.05rem;line-height:1.3;
+}
+.avail__note{margin-top:1.35rem;font-size:.8rem;color:var(--faint);line-height:1.55}
+
 /* forma */
 .form{display:grid;grid-template-columns:1fr 1fr;gap:1.05rem}
 @media (max-width:660px){ .form{grid-template-columns:1fr} }
@@ -885,6 +909,49 @@ html.no-anim .thread{display:none}
   </div>
 </section>
 
+<!-- ═══════════════ BRĪVIE LAIKI ═══════════════ -->
+<section class="sec avail" id="brivie-laiki">
+  <div class="wrap">
+    <div class="sec__head" data-rv>
+      <span class="eyebrow" data-i18n="av_eyebrow">Brīvie laiki</span>
+      <h2 data-i18n="av_h">Tuvākie brīvie laiki</h2>
+      <p class="sec__lead" data-i18n="av_lead">Kalendārs rāda, kurās dienās ir brīvi laiki. Izvēlieties sev ērtu laiku — pieteikuma formā tas jau būs ierakstīts.</p>
+    </div>
+
+    <div class="availcard" data-rv>
+      <div class="calwrap">
+        <div>
+          <div class="calhead">
+            <span class="calhead__m" id="avMonth">—</span>
+            <span class="calnav">
+              <button type="button" id="avPrev" aria-label="Iepriekšējais mēnesis">
+                <svg viewBox="0 0 12 12"><path d="M7.5 2 3.5 6l4 4"/></svg>
+              </button>
+              <button type="button" id="avNext" aria-label="Nākamais mēnesis">
+                <svg viewBox="0 0 12 12"><path d="M4.5 2 8.5 6l-4 4"/></svg>
+              </button>
+            </span>
+          </div>
+          <div class="caldow" id="avDow"></div>
+          <div class="calgrid" id="avGrid"></div>
+          <div class="callegend">
+            <span><i></i><span data-i18n="cal_free">Ir brīvi laiki</span></span>
+            <span><i class="no"></i><span data-i18n="cal_busy">Aizņemts vai nestrādāju</span></span>
+          </div>
+        </div>
+
+        <div>
+          <p class="slots__h" data-i18n="p2_slots">Pieejamie laiki</p>
+          <p class="avail__day" id="avDay">—</p>
+          <div class="slots__grid" id="avSlots"></div>
+          <p class="slots__empty" id="avEmpty" data-i18n="p2_pick">Vispirms izvēlieties datumu kalendārā.</p>
+          <p class="avail__note"><span class="ph" data-i18n="av_note">Šie laiki ir paraugs — pirms publicēšanas tos savienosim ar īstu kalendāru.</span></p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- ═══════════════ PIETEIKŠANĀS ═══════════════ -->
 <section class="sec sec--alt" id="pieteikties">
   <div class="wrap">
@@ -1265,6 +1332,11 @@ lv: {
   how2_h:'Saņemat apstiprinājumu', how2_p:'E-pastā atnāk apstiprinājums ar laiku. Attālinātām sarunām — arī saite uz video zvanu.',
   how3_h:'Tiekamies', how3_p:'Sarunu sākam ar to, kāpēc esat pieteicies. Ja laiks nederēs, to var pārcelt.',
 
+  av_eyebrow:'Brīvie laiki', av_h:'Tuvākie brīvie laiki',
+  av_lead:'Kalendārs rāda, kurās dienās ir brīvi laiki. Izvēlieties sev ērtu laiku — pieteikuma formā tas jau būs ierakstīts.',
+  av_note:'Šie laiki ir paraugs — pirms publicēšanas tos savienosim ar īstu kalendāru.',
+  av_picked:'Laiks izvēlēts. Atliek norādīt pakalpojumu un kontaktinformāciju.',
+
   book_eyebrow:'Tiešsaistes pieteikšanās', book_h:'Izvēlieties laiku',
   book_lead:'Četri soļi. Apstiprinājumu saņemat e-pastā uzreiz pēc pieteikuma.',
   bs1:'Pakalpojums', bs2:'Datums un laiks', bs3:'Kontaktinformācija', bs4:'Apstiprinājums',
@@ -1392,6 +1464,11 @@ ru: {
   how1_h:'Выбираете', how1_p:'Указываете, нужна ли индивидуальная консультация или семинар, и выбираете дату и время из свободных.',
   how2_h:'Получаете подтверждение', how2_p:'На почту приходит подтверждение со временем. Для онлайн-встреч — ещё и ссылка на видеозвонок.',
   how3_h:'Встречаемся', how3_p:'Разговор начинаем с того, зачем Вы записались. Если время не подойдёт, его можно перенести.',
+
+  av_eyebrow:'Свободное время', av_h:'Ближайшее свободное время',
+  av_lead:'Календарь показывает, в какие дни есть свободное время. Выберите удобный час — в форме заявки он уже будет проставлен.',
+  av_note:'Это время показано для примера — до публикации свяжем его с настоящим календарём.',
+  av_picked:'Время выбрано. Осталось указать услугу и контактные данные.',
 
   book_eyebrow:'Онлайн-запись', book_h:'Выберите время',
   book_lead:'Четыре шага. Подтверждение приходит на почту сразу после заявки.',
@@ -1521,6 +1598,11 @@ en: {
   how2_h:'You get a confirmation', how2_p:'A confirmation with the time arrives by email. For online sessions, the video link comes with it.',
   how3_h:'We meet', how3_p:'We start with why you booked. If the time stops working, it can be moved.',
 
+  av_eyebrow:'Availability', av_h:'The next free slots',
+  av_lead:'The calendar shows which days have free slots. Pick a time that suits you — it will already be filled in on the booking form.',
+  av_note:'These times are a sample — before publishing we will connect them to a real calendar.',
+  av_picked:'Time selected. Just add the service and your contact details.',
+
   book_eyebrow:'Online booking', book_h:'Choose a time',
   book_lead:'Four steps. The confirmation arrives by email right after you send the request.',
   bs1:'Service', bs2:'Date and time', bs3:'Contact details', bs4:'Confirmation',
@@ -1645,9 +1727,12 @@ function applyLang(anim) {
 
   renderHero(anim);
   movePill();
-  buildDow();
+  buildDow(calDow);
+  buildDow(avDow);
   renderCal();
   renderSlots();
+  renderAvail();
+  renderAvailSlots();
   refreshSummary();
   updateFoot();
   document.querySelectorAll('#lang button').forEach((b) => {
@@ -1771,58 +1856,100 @@ function daySlots(d) {
 /* Nedēļas dienu saīsinājumus rakstām paši. Intl lv-LV "short" dod
    "pirmd./piektd.", un pirmie divi burti abiem ir "pi" — kalendārā
    pirmdiena un piektdiena izskatītos vienādi. */
-function buildDow() {
-  calDow.innerHTML = '';
+function buildDow(box) {
+  box.innerHTML = '';
   I18N[LANG]._dow.forEach((lb) => {
     const s = document.createElement('span');
     s.textContent = lb;
-    calDow.appendChild(s);
+    box.appendChild(s);
   });
 }
 
-function renderCal() {
-  const loc = I18N[LANG]._locale;
-  // "Augusts 2026", nevis Intl "2026. g. augusts" ar sabojātiem lielajiem burtiem
-  const mn = new Intl.DateTimeFormat(loc, { month: 'long' }).format(view);
-  calMonth.textContent = mn.charAt(0).toUpperCase() + mn.slice(1) + ' ' + view.getFullYear();
-  calPrev.disabled = view <= new Date(today.getFullYear(), today.getMonth(), 1);
-  calNext.disabled = view >= maxView;
-
-  const y = view.getFullYear(), m = view.getMonth();
-  const first = new Date(y, m, 1);
-  const lead = (first.getDay() + 6) % 7;              // pirmdiena = 0
+/* Režģi un laiku pogas zīmē divas vietas — pieteikuma 2. solis un
+   "Brīvie laiki" sadaļa. Zīmēšana tāpēc ir vienā vietā, bet katrai
+   vietai paliek savs redzamais mēnesis un sava izvēle. */
+function paintMonth(grid, mView, selKey, onPick) {
+  const y = mView.getFullYear(), m = mView.getMonth();
+  const lead = (new Date(y, m, 1).getDay() + 6) % 7;   // pirmdiena = 0
   const days = new Date(y, m + 1, 0).getDate();
 
-  calGrid.innerHTML = '';
+  grid.innerHTML = '';
   for (let i = 0; i < lead; i++) {
     const b = document.createElement('span');
     b.className = 'cday empty';
-    calGrid.appendChild(b);
+    grid.appendChild(b);
   }
   for (let dn = 1; dn <= days; dn++) {
     const d = new Date(y, m, dn);
-    const slots = daySlots(d);
+    const k = key(d);
+    const free = daySlots(d).length > 0;
     const b = document.createElement('button');
     b.type = 'button';
-    b.className = 'cday' + (slots.length ? ' free' : '');
+    b.className = 'cday' + (free ? ' free' : '') + (selKey === k ? ' sel' : '');
     b.textContent = dn;
-    b.disabled = !slots.length;
-    b.dataset.k = key(d);
-    if (state.date === key(d)) b.classList.add('sel');
-    b.addEventListener('click', () => {
-      state.date = key(d);
-      state.slot = null;
-      calGrid.querySelectorAll('.cday').forEach((x) => x.classList.toggle('sel', x === b));
-      renderSlots(true);
-      refreshSummary();
-    });
-    calGrid.appendChild(b);
+    b.disabled = !free;
+    b.dataset.k = k;
+    b.addEventListener('click', () => onPick(k, b));
+    grid.appendChild(b);
   }
   if (!soft) {
-    mAnimate(calGrid.querySelectorAll('.cday:not(.empty)'),
+    mAnimate(grid.querySelectorAll('.cday:not(.empty)'),
       { opacity: [0, 1], scale: [.9, 1] },
       { duration: .34, delay: (i) => Math.min(i, 24) * .012, ease: [.22, .85, .28, 1] });
   }
+}
+
+function paintSlots(grid, empty, dateKey, selSlot, onPick, anim) {
+  grid.innerHTML = '';
+  if (!dateKey) {
+    empty.style.display = '';
+    empty.textContent = T('p2_pick');
+    return;
+  }
+  const [Y, M, D] = dateKey.split('-').map(Number);
+  const free = daySlots(new Date(Y, M - 1, D));
+  if (!free.length) {
+    empty.style.display = '';
+    empty.textContent = T('p2_none');
+    return;
+  }
+  empty.style.display = 'none';
+  // dažus rādām aizņemtus, lai kalendārs izskatās dzīvs
+  WORK_HOURS.forEach((h) => {
+    const b = document.createElement('button');
+    b.type = 'button';
+    b.className = 'slot';
+    b.textContent = h;
+    b.disabled = !free.includes(h);
+    b.setAttribute('aria-pressed', String(selSlot === h));
+    b.addEventListener('click', () => onPick(h, b));
+    grid.appendChild(b);
+  });
+  if (anim && !soft) {
+    mAnimate(grid.querySelectorAll('.slot'),
+      { opacity: [0, 1], y: [10, 0] },
+      { duration: .38, delay: (i) => i * .028, ease: [.22, .85, .28, 1] });
+  }
+}
+
+// "Augusts 2026", nevis Intl "2026. g. augusts" ar sabojātiem lielajiem burtiem
+function monthLabel(mView) {
+  const mn = new Intl.DateTimeFormat(I18N[LANG]._locale, { month: 'long' }).format(mView);
+  return mn.charAt(0).toUpperCase() + mn.slice(1) + ' ' + mView.getFullYear();
+}
+
+function renderCal() {
+  calMonth.textContent = monthLabel(view);
+  calPrev.disabled = view <= new Date(today.getFullYear(), today.getMonth(), 1);
+  calNext.disabled = view >= maxView;
+
+  paintMonth(calGrid, view, state.date, (k, b) => {
+    state.date = k;
+    state.slot = null;
+    calGrid.querySelectorAll('.cday').forEach((x) => x.classList.toggle('sel', x === b));
+    renderSlots(true);
+    refreshSummary();
+  });
 }
 
 calPrev.addEventListener('click', () => { view = new Date(view.getFullYear(), view.getMonth() - 1, 1); renderCal(); });
@@ -1832,42 +1959,12 @@ const slotsGrid  = document.getElementById('slotsGrid');
 const slotsEmpty = document.getElementById('slotsEmpty');
 
 function renderSlots(anim) {
-  slotsGrid.innerHTML = '';
-  if (!state.date) {
-    slotsEmpty.style.display = '';
-    slotsEmpty.textContent = T('p2_pick');
-    return;
-  }
-  const [Y, M, D] = state.date.split('-').map(Number);
-  const slots = daySlots(new Date(Y, M - 1, D));
-  if (!slots.length) {
-    slotsEmpty.style.display = '';
-    slotsEmpty.textContent = T('p2_none');
-    return;
-  }
-  slotsEmpty.style.display = 'none';
-  // dažus rādām aizņemtus, lai kalendārs izskatās dzīvs
-  const shown = WORK_HOURS.map((h) => ({ h, free: slots.includes(h) }));
-  shown.forEach(({ h, free }) => {
-    const b = document.createElement('button');
-    b.type = 'button';
-    b.className = 'slot';
-    b.textContent = h;
-    b.disabled = !free;
-    b.setAttribute('aria-pressed', String(state.slot === h));
-    b.addEventListener('click', () => {
-      state.slot = h;
-      slotsGrid.querySelectorAll('.slot').forEach((x) =>
-        x.setAttribute('aria-pressed', String(x === b)));
-      refreshSummary();
-    });
-    slotsGrid.appendChild(b);
-  });
-  if (anim && !soft) {
-    mAnimate(slotsGrid.querySelectorAll('.slot'),
-      { opacity: [0, 1], y: [10, 0] },
-      { duration: .38, delay: (i) => i * .028, ease: [.22, .85, .28, 1] });
-  }
+  paintSlots(slotsGrid, slotsEmpty, state.date, state.slot, (h, b) => {
+    state.slot = h;
+    slotsGrid.querySelectorAll('.slot').forEach((x) =>
+      x.setAttribute('aria-pressed', String(x === b)));
+    refreshSummary();
+  }, anim);
 }
 
 /* ── 4.3 kopsavilkums ──────────────────────────────────── */
@@ -1969,6 +2066,100 @@ bNext.addEventListener('click', () => {
   document.querySelectorAll('#fName,#fMail,#fTel,#fOrg,#fMsg,#fCount').forEach((x) => (x.value = ''));
   refreshSummary();
   showStep(1, -1);
+});
+
+/* ══════════════════════════════════════════════════════════
+   4.5 BRĪVIE LAIKI — atsevišķa sadaļa, tikai izskats
+   Sadaļai ir savs redzamais mēnesis un sava dienas izvēle.
+   Pieteikumā tā neko neieraksta, kamēr cilvēks nav nospiedis
+   konkrētu laiku — tikai tad datums un laiks pāriet uz formu.
+   ══════════════════════════════════════════════════════════ */
+const avMonth = document.getElementById('avMonth');
+const avGrid  = document.getElementById('avGrid');
+const avDow   = document.getElementById('avDow');
+const avPrev  = document.getElementById('avPrev');
+const avNext  = document.getElementById('avNext');
+const avSlots = document.getElementById('avSlots');
+const avEmpty = document.getElementById('avEmpty');
+const avDayEl = document.getElementById('avDay');
+
+// Tuvākā diena ar brīvu laiku, lai sadaļa uzreiz rāda laikus, nevis tukšumu.
+function firstFreeDay() {
+  const d = new Date(today);
+  for (let i = 0; i < 90; i++) {
+    if (daySlots(d).length) return key(d);
+    d.setDate(d.getDate() + 1);
+  }
+  return null;
+}
+
+let avDate = firstFreeDay();
+let avSlot = null;
+let avView = avDate
+  ? new Date(+avDate.slice(0, 4), +avDate.slice(5, 7) - 1, 1)
+  : new Date(today.getFullYear(), today.getMonth(), 1);
+
+function dayLabel(k) {
+  if (!k) return '';
+  const [Y, M, D] = k.split('-').map(Number);
+  const s = new Intl.DateTimeFormat(I18N[LANG]._locale,
+    { weekday: 'long', day: 'numeric', month: 'long' }).format(new Date(Y, M - 1, D));
+  return s.charAt(0).toUpperCase() + s.slice(1);
+}
+
+function renderAvail() {
+  avMonth.textContent = monthLabel(avView);
+  avPrev.disabled = avView <= new Date(today.getFullYear(), today.getMonth(), 1);
+  avNext.disabled = avView >= maxView;
+  avDayEl.textContent = dayLabel(avDate);
+  avDayEl.style.display = avDate ? '' : 'none';
+
+  paintMonth(avGrid, avView, avDate, (k, b) => {
+    avDate = k;
+    avSlot = null;
+    avGrid.querySelectorAll('.cday').forEach((x) => x.classList.toggle('sel', x === b));
+    avDayEl.textContent = dayLabel(k);
+    avDayEl.style.display = '';
+    renderAvailSlots(true);
+  });
+}
+
+function renderAvailSlots(anim) {
+  paintSlots(avSlots, avEmpty, avDate, avSlot, (h, b) => {
+    avSlot = h;
+    avSlots.querySelectorAll('.slot').forEach((x) =>
+      x.setAttribute('aria-pressed', String(x === b)));
+    state.date = avDate;
+    state.slot = h;
+    view = new Date(avView);          // pieteikuma kalendārs pārlec uz to pašu mēnesi
+    renderCal();
+    renderSlots();
+    refreshSummary();
+    goToBooking();
+  }, anim);
+}
+
+/* Aizritina līdz pieteikumam. Fiksētā josla un navigācija citādi
+   nosegtu sadaļas augšu, tāpēc rēķinām nobīdi pašu spēkiem. */
+function goToBooking() {
+  const OFFSET = 114;                 // josla 34 + sarukusī navigācija 62 + gaiss
+  const sec = document.getElementById('pieteikties');
+  scrollTo({
+    top: sec.getBoundingClientRect().top + scrollY - OFFSET,
+    behavior: reduced ? 'auto' : 'smooth',
+  });
+  bookNote.textContent = T('av_picked');
+  bookNote.style.color = 'var(--moss-deep)';
+  setTimeout(() => { bookNote.style.color = ''; updateFoot(); }, 3400);
+}
+
+avPrev.addEventListener('click', () => {
+  avView = new Date(avView.getFullYear(), avView.getMonth() - 1, 1);
+  renderAvail();
+});
+avNext.addEventListener('click', () => {
+  avView = new Date(avView.getFullYear(), avView.getMonth() + 1, 1);
+  renderAvail();
 });
 
 /* ══════════════════════════════════════════════════════════
